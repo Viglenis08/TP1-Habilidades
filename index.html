@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Threads</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Bootstrap JS (incluye Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="icon" href="/img/icono.svg" type="image/x-icon">
+
+</head>
+
+
+<body>
+
+  <!-- Encabezado -->
+  <header id="header" class="bg-primary text-white text-center py-3">
+    <h2>Urban Threads</h2 >
+  </header>
+  <!-- Navbar responsive -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#nosotros">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#productos">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contáctanos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Contenedor para secciones -->
+  <div class="secciones-container">
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="container my-5">
+      <h2 class="text-center mb-4">Acerca de </h2>
+      <div class="row mb-5 align-items-center">
+        <div class="col-md-6">
+          <img src="/img/about.png" alt="Imagen 1" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nulla facilisis, hendrerit urna ut, malesuada elit. Etiam vitae ex sed orci volutpat pulvinar. Nulla facilisi. Donec eget sapien at turpis viverra fermentum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nulla facilisis, hendrerit urna ut, malesuada elit. Etiam vitae ex sed orci volutpat pulvinar. Nulla facilisi. Donec eget sapien at turpis viverra fermentum.
+          </p>
+        </div>
+      </div>
+      <div class="row mb-5 align-items-center">
+        <!-- Video en lugar de la imagen -->
+        <div class="col-md-6 order-md-2">
+          <video class="img-fluid rounded" autoplay muted loop playsinline>
+            <source src="/img/proyectos.mp4" type="video/mp4">
+       
+          </video>
+        </div>
+        <div class="col-md-6 order-md-1">
+          <p>
+            Fusce ut magna et lacus bibendum iaculis. Phasellus non dui non dolor sodales consequat. Quisque auctor mauris vel nulla consequat, vitae dignissim lacus convallis.
+          </p>
+          <p>
+            Fusce ut magna et lacus bibendum iaculis. Phasellus non dui non dolor sodales consequat. Quisque auctor mauris vel nulla consequat, vitae dignissim lacus convallis.
+          </p>
+        </div>
+      </div>
+      <div class="row mb-5 align-items-center">
+        <!-- Video en lugar de la imagen -->
+        <div class="col-md-6">
+          <video class="img-fluid rounded" autoplay muted loop playsinline>
+            <source src="/img/video.mp4" type="video/mp4">
+  
+          </video>
+        </div>
+        <div class="col-md-6">
+          <p>
+            Curabitur nec nisi ac velit convallis porttitor. Integer feugiat pharetra enim, sit amet cursus augue feugiat vel. Morbi non nisi sed lorem vehicula bibendum nec et lorem.
+          </p>
+          <p>
+            Curabitur nec nisi ac velit convallis porttitor. Integer feugiat pharetra enim, sit amet cursus augue feugiat vel. Morbi non nisi sed lorem vehicula bibendum nec et lorem.
+          </p>
+        </div>
+      </div>
+      
+    </section>
+
+  <!-- Sección Productos -->
+<section id="productos" class="seccion">
+    <h2 class="text-center my-4"></h2>
+    
+    <!-- Mini banner carrusel -->
+    <div id="carouselBanner" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/img/banner1.png" class="d-block w-100" alt="Banner 1">
+        </div>
+        <div class="carousel-item">
+          <img src="/img/banner2.png" class="d-block w-100" alt="Banner 2">
+        </div>
+        <div class="carousel-item">
+          <img src="/img/banner3.png" class="d-block w-100" alt="Banner 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  
+    <!-- Galería de Productos -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 1" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 1" data-colors='["Rojo", "Verde", "Azul"]' data-sizes='["S", "M", "L"]'>
+            <div class="card-body">
+              <h5 class="card-title">Producto 1</h5>
+              <p class="card-text">$10.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 2" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 2" data-colors='["Negro", "Blanco"]' data-sizes='["M", "L"]'>
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+              <p class="card-text">$15.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 3" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 3" data-colors='["Amarillo", "Naranja"]' data-sizes='["S", "M"]'>
+            <div class="card-body">
+              <h5 class="card-title">Producto 3</h5>
+              <p class="card-text">$20.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 4" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 4" data-colors='["Gris", "Azul Claro"]' data-sizes='["L"]'>
+            <div class="card-body">
+              <h5 class="card-title">Producto 4</h5>
+              <p class="card-text">$25.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 1" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 1" data-colors='["Rojo", "Verde", "Azul"]' data-sizes='["S", "M", "L"]'>
+              <div class="card-body">
+                <h5 class="card-title">Producto 5</h5>
+                <p class="card-text">$10.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 2" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 2" data-colors='["Negro", "Blanco"]' data-sizes='["M", "L"]'>
+              <div class="card-body">
+                <h5 class="card-title">Producto 6</h5>
+                <p class="card-text">$15.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 3" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 3" data-colors='["Amarillo", "Naranja"]' data-sizes='["S", "M"]'>
+              <div class="card-body">
+                <h5 class="card-title">Producto 7</h5>
+                <p class="card-text">$20.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 4" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 4" data-colors='["Gris", "Azul Claro"]' data-sizes='["L"]'>
+              <div class="card-body">
+                <h5 class="card-title">Producto 8</h5>
+                <p class="card-text">$25.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 1" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 1" data-colors='["Rojo", "Verde", "Azul"]' data-sizes='["S", "M", "L"]'>
+              <div class="card-body">
+                <h5 class="card-title">Producto 9</h5>
+                <p class="card-text">$10.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 2" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 2" data-colors='["Negro", "Blanco"]' data-sizes='["M", "L"]'>
+              <div class="card-body">
+                <h5 class="card-title">Producto 10</h5>
+                <p class="card-text">$15.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 3" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 3" data-colors='["Amarillo", "Naranja"]' data-sizes='["S", "M"]'>
+              <div class="card-body">
+                <h5 class="card-title">Producto 11</h5>
+                <p class="card-text">$20.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 4" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 4" data-colors='["Gris", "Azul Claro"]' data-sizes='["L"]'>
+              <div class="card-body">
+                <h5 class="card-title">Producto 12</h5>
+                <p class="card-text">$25.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    <!-- Modal para seleccionar opciones del producto -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModalLabel">Selecciona opciones para <span id="product-name"></span></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="colorSelect" class="form-label">Color</label>
+              <select class="form-select" id="colorSelect"></select>
+            </div>
+            <div class="mb-3">
+              <label for="sizeSelect" class="form-label">Tamaño</label>
+              <select class="form-select" id="sizeSelect"></select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" id="addToCart">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  
+    </section>
+<!-- Carrito sobrepuesto -->
+<div id="cartOverlay" class="cart-overlay">
+    <div class="cart-content">
+      <!-- Ícono de Cierre -->
+      <button id="closeCart" class="close-cart-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2>¡Tu pedido!📦</h2>
+      <p>¡Felicitaciones por tu compra!🥳</p>
+      <div id="cartItems" class="cart-items"></div>
+      <p id="totalPrice" class="total-price">Total: $0.00</p>
+      <button id="continueShopping" class="btn btn-secondary">¿Deseas seguir comprando?</button>
+      <button id="payButton" class="btn btn-success">Proceder al Pago</button>
+    </div>
+</div>
+
+  
+<!-- Sección Contacto -->
+<section id="contacto" class="container-fluid px-4 py-5">
+  <h2 class="text-center mb-4">Contáctanos</h2>
+  <div class="row">
+    <!-- Enlaces a Redes Sociales -->
+    <div class="col-12 col-md-6 mb-4">
+      <h5>Síguenos en redes sociales 🔔</h5>
+      <ul class="list-unstyled">
+        <li class="mb-2">
+          <a href="#" class="text-decoration-none d-flex align-items-center">
+            <i class="fab fa-facebook-square me-2"></i> Facebook
+          </a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-decoration-none d-flex align-items-center">
+            <i class="fab fa-twitter-square me-2"></i> Twitter
+          </a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-decoration-none d-flex align-items-center">
+            <i class="fab fa-instagram-square me-2"></i> Instagram
+          </a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-decoration-none d-flex align-items-center">
+            <i class="fab fa-github me-2"></i> GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Formulario de Contacto -->
+    <div class="col-12 col-md-6">
+      <h5>Hablemos 📨</h5>
+      <form>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+   const productModal = document.getElementById('productModal');
+  const productName = document.getElementById('product-name');
+  const colorSelect = document.getElementById('colorSelect');
+  const sizeSelect = document.getElementById('sizeSelect');
+  const cartOverlay = document.getElementById('cartOverlay');
+  const cartItemsContainer = document.getElementById('cartItems');
+  const totalPriceElement = document.getElementById('totalPrice');
+  let cartItems = []; 
+  
+
+
+  
+  productModal.addEventListener('show.bs.modal', (event) => {
+    const button = event.relatedTarget;
+    const product = button.getAttribute('data-product');
+    const colors = JSON.parse(button.getAttribute('data-colors'));
+    const sizes = JSON.parse(button.getAttribute('data-sizes'));
+
+    productName.textContent = product;
+    colorSelect.innerHTML = '';
+    sizeSelect.innerHTML = '';
+
+    colors.forEach(color => {
+      const option = document.createElement('option');
+      option.value = color;
+      option.textContent = color;
+      colorSelect.appendChild(option);
+    });
+
+    sizes.forEach(size => {
+      const option = document.createElement('option');
+      option.value = size;
+      option.textContent = size;
+      sizeSelect.appendChild(option);
+    });
+  });
+
+  document.getElementById('addToCart').addEventListener('click', () => {
+    const selectedColor = colorSelect.value;
+    const selectedSize = sizeSelect.value;
+    const productNameText = productName.textContent;
+    const productPrice = 20.00; 
+
+    cartItems.push({ name: productNameText, color: selectedColor, size: selectedSize, price: productPrice });
+
+    updateCart();
+    cartOverlay.classList.add('active');
+    
+    const modal = bootstrap.Modal.getInstance(productModal);
+    modal.hide(); 
+  });
+
+  function updateCart() {
+    cartItemsContainer.innerHTML = ''; 
+    let totalPrice = 0;
+
+    cartItems.forEach(item => {
+      const itemDiv = document.createElement('div');
+      itemDiv.textContent = `${item.name} - Color: ${item.color}, Tamaño: ${item.size} - $${item.price.toFixed(2)}`;
+      cartItemsContainer.appendChild(itemDiv);
+      totalPrice += item.price; 
+    });
+
+    totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+  }
+
+  // Continuar la compra
+  document.getElementById('continueShopping').addEventListener('click', () => {
+    cartOverlay.classList.remove('active'); 
+  });
+
+// Evento para proceder al pago
+document.getElementById('payButton').addEventListener('click', () => {
+  window.location.href = 'pagina-de-pago.html';
+});
+
+});
+// Evento para cerrar el carrito
+document.getElementById('closeCart').addEventListener('click', () => {
+    cartOverlay.classList.remove('active'); 
+});
+
+
+  </script>
+<footer class="bg-dark text-white text-center py-3 mt-auto">
+  <div class="container">
+    <p class="mb-0">&copy; 2024 Urban Threads. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+  
+</body>
+</html>
