@@ -2,7 +2,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f8f9fa;
-    padding-top: 120px; /* Espacio para el encabezado y el menú fijo */
+    padding-top: 60px; /* Espacio para el encabezado y el menú fijo */
   }
   
  
@@ -85,6 +85,9 @@ header {
   /* Formulario */
   .container {
     margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en la siguiente línea */
+    justify-content: center;
   }
   
   form label {
@@ -152,7 +155,14 @@ header {
     color: #ffcccc; /* Cambia el color al pasar el ratón */
 }
 
-s
+#cartButton {
+  margin-right: 15px;
+}
+
+#cartButton .badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
   /* Ejemplo de enfoque para campos de formulario */
 form input:focus,
 form textarea:focus {
@@ -187,23 +197,46 @@ form textarea:focus {
 #contacto {
     background-color: #f8f9fa; /* Fondo suave */
     padding: 40px 0; /* Espacio superior e inferior */
-    border-top: 1px solid #dee2e6; /* Línea divisoria */
+    border-top: none;
+    margin-top: 0; 
 }
 
 #contacto h2 {
-    margin-bottom: 30px; /* Espacio debajo del título */
+     margin: 0; /* Elimina margen superior/inferior */
+    padding-top: 0px; /* Espacio mínimo superior */
+    color: #1d2441; /* Color del título */
+    position: relative;
+    
 }
-
+#contacto h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+} 
 #contacto .list-unstyled li {
     margin-bottom: 10px; /* Espacio entre enlaces */
 }
 
 #contacto .form-control {
     border-radius: 0.25rem; /* Bordes redondeados para campos */
+    border: 1px solid #ced4da;
+    transition: box-shadow 0.3s, border-color 0.3s;
 }
 
 #contacto .btn-primary {
     margin-top: 10px; /* Espacio superior para el botón */
+    background-color: #1d2441;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+#contacto .btn-primary:hover {
+  background-color: #0d1133;
+  transform: scale(1.05);
 }
 ul.list-unstyled a {
     color: #007bff; /* Cambia esto al color que desees */
@@ -251,4 +284,32 @@ footer p {
     margin: 0 auto; /* Centrar el carrusel */
     overflow: hidden;
   }
-  
+  /* Configuración del Grid */
+
+.resena {
+  text-align: center; /* Centrar el texto dentro del contenedor */
+  padding: 44px; /* Espaciado alrededor */
+}
+
+.reseñas-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items:auto; /* Asegúrate de que las cards estén centradas */
+}
+
+
+/* Tarjetas estilizadas */
+.card {
+  border: 1px solid #e0e0e0; /* Bordes de la tarjeta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de la tarjeta */
+  transition: transform 0.2s; /* Transición al hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Escala al hacer hover */
+}
+
+.card-footer {
+  background-color: #f8f9fa; /* Color de fondo del pie de la tarjeta */
+}

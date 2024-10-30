@@ -47,7 +47,19 @@
           <li class="nav-item">
             <a class="nav-link" href="contacto.html">Contáctanos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resena.html">Reseñas</a>
+          </li>
         </ul>
+      </div>
+    </div>
+    <div class="d-flex align-items-center">
+        <button id="cartButton" class="btn btn-outline-light position-relative">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+        </button>
       </div>
     </div>
   </nav>
@@ -83,127 +95,120 @@
       </button>
     </div>
   
-    <!-- Galería de Productos -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 mb-4">
-          <div class="card">
-            <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 1" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 1" data-colors='["Rojo", "Verde", "Azul"]' data-sizes='["S", "M", "L"]'>
-            <div class="card-body">
-              <h5 class="card-title">Producto 1</h5>
-              <p class="card-text">$10.00</p>
+<!-- Galería de Productos -->
+<div class="container">
+    <div class="row d-flex flex-wrap justify-content-center">
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card flex-fill">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 1" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 1" data-colors='["Rojo", "Verde", "Azul"]' data-sizes='["S", "M", "L"]'>
+                <div class="card-body">
+                    <h5 class="card-title">Producto 1</h5>
+                    <p class="card-text">$10.00</p>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-md-3 mb-4">
-          <div class="card">
-            <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 2" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 2" data-colors='["Negro", "Blanco"]' data-sizes='["M", "L"]'>
-            <div class="card-body">
-              <h5 class="card-title">Producto 2</h5>
-              <p class="card-text">$15.00</p>
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card flex-fill">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 2" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 2" data-colors='["Negro", "Blanco"]' data-sizes='["M", "L"]'>
+                <div class="card-body">
+                    <h5 class="card-title">Producto 2</h5>
+                    <p class="card-text">$15.00</p>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-md-3 mb-4">
-          <div class="card">
-            <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 3" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 3" data-colors='["Amarillo", "Naranja"]' data-sizes='["S", "M"]'>
-            <div class="card-body">
-              <h5 class="card-title">Producto 3</h5>
-              <p class="card-text">$20.00</p>
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card flex-fill">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 3" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 3" data-colors='["Amarillo", "Naranja"]' data-sizes='["S", "M"]'>
+                <div class="card-body">
+                    <h5 class="card-title">Producto 3</h5>
+                    <p class="card-text">$20.00</p>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-md-3 mb-4">
-          <div class="card">
-            <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 4" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 4" data-colors='["Gris", "Azul Claro"]' data-sizes='["L"]'>
-            <div class="card-body">
-              <h5 class="card-title">Producto 4</h5>
-              <p class="card-text">$25.00</p>
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card flex-fill">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 4" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 4" data-colors='["Gris", "Azul Claro"]' data-sizes='["L"]'>
+                <div class="card-body">
+                    <h5 class="card-title">Producto 4</h5>
+                    <p class="card-text">$25.00</p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card flex-fill">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 5" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 5" data-colors='["Rojo", "Verde", "Azul"]' data-sizes='["S", "M", "L"]'>
+                <div class="card-body">
+                    <h5 class="card-title">Producto 5</h5>
+                    <p class="card-text">$10.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card flex-fill">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 6" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 6" data-colors='["Negro", "Blanco"]' data-sizes='["M", "L"]'>
+                <div class="card-body">
+                    <h5 class="card-title">Producto 6</h5>
+                    <p class="card-text">$15.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card flex-fill">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 7" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 7" data-colors='["Amarillo", "Naranja"]' data-sizes='["S", "M"]'>
+                <div class="card-body">
+                    <h5 class="card-title">Producto 7</h5>
+                    <p class="card-text">$20.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card flex-fill">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 8" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 8" data-colors='["Gris", "Azul Claro"]' data-sizes='["L"]'>
+                <div class="card-body">
+                    <h5 class="card-title">Producto 8</h5>
+                    <p class="card-text">$25.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card flex-fill">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 9" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 9" data-colors='["Rojo", "Verde", "Azul"]' data-sizes='["S", "M", "L"]'>
+                <div class="card-body">
+                    <h5 class="card-title">Producto 9</h5>
+                    <p class="card-text">$10.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card flex-fill">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 10" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 10" data-colors='["Negro", "Blanco"]' data-sizes='["M", "L"]'>
+                <div class="card-body">
+                    <h5 class="card-title">Producto 10</h5>
+                    <p class="card-text">$15.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card flex-fill">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 11" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 11" data-colors='["Amarillo", "Naranja"]' data-sizes='["S", "M"]'>
+                <div class="card-body">
+                    <h5 class="card-title">Producto 11</h5>
+                    <p class="card-text">$20.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card flex-fill">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 12" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 12" data-colors='["Gris", "Azul Claro"]' data-sizes='["L"]'>
+                <div class="card-body">
+                    <h5 class="card-title">Producto 12</h5>
+                    <p class="card-text">$25.00</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="container">
-        <div class="row">
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 1" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 1" data-colors='["Rojo", "Verde", "Azul"]' data-sizes='["S", "M", "L"]'>
-              <div class="card-body">
-                <h5 class="card-title">Producto 5</h5>
-                <p class="card-text">$10.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 2" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 2" data-colors='["Negro", "Blanco"]' data-sizes='["M", "L"]'>
-              <div class="card-body">
-                <h5 class="card-title">Producto 6</h5>
-                <p class="card-text">$15.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 3" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 3" data-colors='["Amarillo", "Naranja"]' data-sizes='["S", "M"]'>
-              <div class="card-body">
-                <h5 class="card-title">Producto 7</h5>
-                <p class="card-text">$20.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 4" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 4" data-colors='["Gris", "Azul Claro"]' data-sizes='["L"]'>
-              <div class="card-body">
-                <h5 class="card-title">Producto 8</h5>
-                <p class="card-text">$25.00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 1" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 1" data-colors='["Rojo", "Verde", "Azul"]' data-sizes='["S", "M", "L"]'>
-              <div class="card-body">
-                <h5 class="card-title">Producto 9</h5>
-                <p class="card-text">$10.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 2" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 2" data-colors='["Negro", "Blanco"]' data-sizes='["M", "L"]'>
-              <div class="card-body">
-                <h5 class="card-title">Producto 10</h5>
-                <p class="card-text">$15.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 3" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 3" data-colors='["Amarillo", "Naranja"]' data-sizes='["S", "M"]'>
-              <div class="card-body">
-                <h5 class="card-title">Producto 11</h5>
-                <p class="card-text">$20.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 4" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 4" data-colors='["Gris", "Azul Claro"]' data-sizes='["L"]'>
-              <div class="card-body">
-                <h5 class="card-title">Producto 12</h5>
-                <p class="card-text">$25.00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+</div>
+
   
     <!-- Modal para seleccionar opciones del producto -->
     <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
@@ -225,7 +230,8 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary" id="addToCart">Agregar al carrito</button>
+            <button class="btn btn-primary" id="addToCart" data-price="20.00">Agregar al carrito</button>
+
           </div>
         </div>
       </div>
@@ -251,93 +257,99 @@
       <button id="payButton" class="btn btn-success">Proceder al Pago</button>
     </div>
 </div>
-
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const productModal = document.getElementById('productModal');
-   const productName = document.getElementById('product-name');
-   const colorSelect = document.getElementById('colorSelect');
-   const sizeSelect = document.getElementById('sizeSelect');
-   const cartOverlay = document.getElementById('cartOverlay');
-   const cartItemsContainer = document.getElementById('cartItems');
-   const totalPriceElement = document.getElementById('totalPrice');
-   let cartItems = []; 
-   
- 
- 
-   
-   productModal.addEventListener('show.bs.modal', (event) => {
-     const button = event.relatedTarget;
-     const product = button.getAttribute('data-product');
-     const colors = JSON.parse(button.getAttribute('data-colors'));
-     const sizes = JSON.parse(button.getAttribute('data-sizes'));
- 
-     productName.textContent = product;
-     colorSelect.innerHTML = '';
-     sizeSelect.innerHTML = '';
- 
-     colors.forEach(color => {
-       const option = document.createElement('option');
-       option.value = color;
-       option.textContent = color;
-       colorSelect.appendChild(option);
-     });
- 
-     sizes.forEach(size => {
-       const option = document.createElement('option');
-       option.value = size;
-       option.textContent = size;
-       sizeSelect.appendChild(option);
-     });
-   });
- 
-   document.getElementById('addToCart').addEventListener('click', () => {
-     const selectedColor = colorSelect.value;
-     const selectedSize = sizeSelect.value;
-     const productNameText = productName.textContent;
-     const productPrice = 20.00; 
- 
-     cartItems.push({ name: productNameText, color: selectedColor, size: selectedSize, price: productPrice });
- 
-     updateCart();
-     cartOverlay.classList.add('active');
-     
-     const modal = bootstrap.Modal.getInstance(productModal);
-     modal.hide(); 
-   });
- 
-   function updateCart() {
-     cartItemsContainer.innerHTML = ''; 
-     let totalPrice = 0;
- 
-     cartItems.forEach(item => {
-       const itemDiv = document.createElement('div');
-       itemDiv.textContent = `${item.name} - Color: ${item.color}, Tamaño: ${item.size} - $${item.price.toFixed(2)}`;
-       cartItemsContainer.appendChild(itemDiv);
-       totalPrice += item.price; 
-     });
- 
-     totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
-   }
- 
-   // Continuar la compra
-   document.getElementById('continueShopping').addEventListener('click', () => {
-     cartOverlay.classList.remove('active'); 
-   });
- 
- // Evento para proceder al pago
- document.getElementById('payButton').addEventListener('click', () => {
-   window.location.href = 'pagina-de-pago.html';
- });
- 
- });
- // Evento para cerrar el carrito
- document.getElementById('closeCart').addEventListener('click', () => {
-     cartOverlay.classList.remove('active'); 
- });
- 
- 
-   </script>
+    const productName = document.getElementById('product-name');
+    const colorSelect = document.getElementById('colorSelect');
+    const sizeSelect = document.getElementById('sizeSelect');
+    const cartOverlay = document.getElementById('cartOverlay');
+    const cartItemsContainer = document.getElementById('cartItems');
+    const totalPriceElement = document.getElementById('totalPrice');
+    
+    let cartItems = []; 
+
+    productModal.addEventListener('show.bs.modal', (event) => {
+        const button = event.relatedTarget;
+        const product = button.getAttribute('data-product');
+        const colors = JSON.parse(button.getAttribute('data-colors'));
+        const sizes = JSON.parse(button.getAttribute('data-sizes'));
+
+        productName.textContent = product;
+        colorSelect.innerHTML = '';
+        sizeSelect.innerHTML = '';
+
+        colors.forEach(color => {
+            const option = document.createElement('option');
+            option.value = color;
+            option.textContent = color;
+            colorSelect.appendChild(option);
+        });
+
+        sizes.forEach(size => {
+            const option = document.createElement('option');
+            option.value = size;
+            option.textContent = size;
+            sizeSelect.appendChild(option);
+        });
+    });
+
+    document.getElementById('cartButton').addEventListener('click', () => {
+        cartOverlay.classList.toggle('active'); 
+    });
+
+    document.getElementById('addToCart').addEventListener('click', () => {
+        const selectedColor = colorSelect.value;
+        const selectedSize = sizeSelect.value;
+        const productNameText = productName.textContent;
+        const productPrice = parseFloat(document.getElementById('addToCart').getAttribute('data-price'));
+
+        if (isNaN(productPrice)) {
+            console.error('Error: No se encontró el precio del producto.');
+            return; // Salir si no hay precio válido
+        }
+
+        cartItems.push({ name: productNameText, color: selectedColor, size: selectedSize, price: productPrice });
+        updateCart();
+        cartOverlay.classList.add('active');
+
+        const modal = bootstrap.Modal.getInstance(productModal);
+        modal.hide(); 
+    });
+
+    function updateCart() {
+    cartItemsContainer.innerHTML = ''; 
+    let totalPrice = 0;
+
+    // Actualiza el contador del carrito
+    const cartCountElement = document.getElementById('cartCount');
+    cartCountElement.textContent = cartItems.length; // Muestra la cantidad de artículos en el carrito
+
+    cartItems.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.textContent = `${item.name} - Color: ${item.color}, Tamaño: ${item.size} - $${item.price.toFixed(2)}`;
+        cartItemsContainer.appendChild(itemDiv);
+        totalPrice += item.price; 
+    });
+
+    totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+}
+
+    document.getElementById('continueShopping').addEventListener('click', () => {
+        cartOverlay.classList.remove('active'); 
+    });
+
+    document.getElementById('payButton').addEventListener('click', () => {
+        window.location.href = 'pagina-de-pago.html';
+    });
+
+    document.getElementById('closeCart').addEventListener('click', () => {
+        cartOverlay.classList.remove('active'); 
+    });
+});
+
+    </script>
+    
    <footer class="bg-dark text-white text-center py-3 mt-auto">
     <div class="container">
       <p class="mb-0">&copy; 2024 Urban Threads. Todos los derechos reservados.</p>
