@@ -38,7 +38,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
-    text-shadow: 2px 2px 5px #d80a33cd; /* Sombra para mejorar la legibilidad */
+    text-shadow: 2px 2px 5px hsla(167, 91%, 44%, 0.804); /* Sombra para mejorar la legibilidad */
     margin: 0; /* Elimina márgenes internos del <h1> */
     padding: 0;
     text-align: center;
