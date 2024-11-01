@@ -22,7 +22,10 @@ header {
   
   /* Estilo del contenedor del encabezado con la imagen */
   #header {
-    background-image: url('https://Viglenis08.github.io/repo/img/header.png'); /* Cambia por la ruta real */
+    background-color: red; /* Cambia a un color visible */
+
+
+   /* background-image: url('https://Viglenis08.github.io/repo/img/header.png'); /* Cambia por la ruta real */
     background-size: cover; /* Para que la imagen ocupe todo el fondo */
     background-position: center; /* Centrar la imagen */
     background-repeat: no-repeat; /* Evitar que la imagen se repita */
