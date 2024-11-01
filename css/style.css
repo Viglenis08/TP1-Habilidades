@@ -20,19 +20,9 @@ header {
 
   }
   
-  /* Estilo del contenedor del encabezado con la imagen 
-  #header {
-    background-image: url('../img/header.png');/* Cambia por la ruta real */
-    /*background-size: cover; /* Para que la imagen ocupe todo el fondo */
-    /*background-position: center; /* Centrar la imagen */
-    /*background-repeat: no-repeat; /* Evitar que la imagen se repita */
-    /*height: 180px; /* Ajusta la altura */
-    /*width: 100%;
-   
-  }
   
   /* Estilo del título dentro del encabezado */
-  #header h1 {
+  #header h2 {
     position: absolute;
     top: 50%;
     left: 50%;
