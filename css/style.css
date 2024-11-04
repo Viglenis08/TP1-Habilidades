@@ -274,21 +274,7 @@ footer p {
     margin: 0 auto; /* Centrar el carrusel */
     overflow: hidden;
   }
-  /* Configuración del Grid */
-
-.resena {
-  text-align: center; /* Centrar el texto dentro del contenedor */
-  padding: 44px; /* Espaciado alrededor */
-}
-
-.reseñas-grid {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-items:auto; /* Asegúrate de que las cards estén centradas */
-}
-
-
+ 
 /* Tarjetas estilizadas */
 .card {
   border: 1px solid #e0e0e0; /* Bordes de la tarjeta */
@@ -302,4 +288,47 @@ footer p {
 
 .card-footer {
   background-color: #f8f9fa; /* Color de fondo del pie de la tarjeta */
+}
+
+.custom-modal .modal-content {
+  border: 2px solid #1d2441;  /* Cambia este valor al color que desees */
+  border-radius: 10px; /* Opcional: para esquinas redondeadas */
+}
+
+.custom-modal .modal-header {
+  background-color: #1d2441;  /* Color de fondo del encabezado */
+  color: white; /* Color del texto del encabezado */
+}
+/* Cambia el color del ícono de cierre a blanco */
+.btn-close {
+  filter: invert(100%);
+}
+
+/* Cambia el color al hacer hover */
+.btn-close:hover {
+  filter: invert(50%); /* Cambia el valor según el color que desees al hacer hover */
+  background-color: transparent; /* Asegúrate de que el fondo sea transparente */
+}
+
+.custom-review-button {
+  color: #1d2441; /* Color del texto por defecto */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+/* Color del botón al pasar el mouse */
+.custom-review-button:hover {
+  color: #FFD700; /* Cambia a un color dorado o el que desees */
+}
+
+#como-comprar {
+  margin-top: 80px; /* Ajusta este valor según sea necesario */
+}
+
+.step-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
 }
