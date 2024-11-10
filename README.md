@@ -50,3 +50,14 @@ Crea una nueva rama (git checkout -b feature/nueva-caracteristica).
 Realiza tus cambios y haz commit (git commit -am 'Añadir nueva característica').
 Haz push a la rama (git push origin feature/nueva-caracteristica).
 Crea un nuevo Pull Request.   
+# E-commerce de Ropa - Urban Threads
+
+## Capturas de Pantalla
+
+### Página de Inicio
+
+![Página de Inicio](readme/desing1.jpg)
+
+### Pantalla de aplicacionws
+
+![Muestra de todas](readme/desing2.jpg)
