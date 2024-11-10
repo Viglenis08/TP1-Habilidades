@@ -56,8 +56,8 @@ Crea un nuevo Pull Request.
 
 ### Página de Inicio
 
-![Página de Inicio](readme/desing1.jpg)
+![Página de Inicio](readme/design1.jpg)
 
 ### Pantalla de aplicacionws
 
-![Muestra de todas](readme/desing2.jpg)
+![Muestra de todas](readme/design2.jpg)
