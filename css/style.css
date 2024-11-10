@@ -2,34 +2,29 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f8f9fa;
-    padding-top: 60px; /* Espacio para el encabezado y el menú fijo */
+    padding-top: 60px; 
   }
   
  
 /* Encabezado fijo */
 header {
-    position: fixed; /* Mantener el encabezado fijo */
-    top: 0; /* Fijar en la parte superior */
-    left: 0; /* Alinear a la izquierda */
-    width: 100%; /* Ancho completo */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
     z-index: 1000;
-    padding: 0; /* Elimina márgenes innecesarios */
-    
-  height: 120px; /* Ajusta si el encabezado crece */
-
-
+    padding: 0; 
+    height: 120px; 
   }
   
-  
-  /* Estilo del título dentro del encabezado */
   #header h2 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
-    text-shadow: 2px 2px 5px hsla(167, 91%, 44%, 0.804); /* Sombra para mejorar la legibilidad */
-    margin: 0; /* Elimina márgenes internos del <h1> */
+    text-shadow: 2px 2px 5px hsla(167, 91%, 44%, 0.804); 
+    margin: 0; 
     padding: 0;
     text-align: center;
   }
@@ -41,13 +36,13 @@ header {
   
   /* Navbar */
   .navbar {
-    position: fixed; /* Mantener el menú fijo */
-    top: 125px; /* Fijar debajo del encabezado */
-    left: 0; /* Alinear a la izquierda */
-    width: 100%; /* Ancho completo */
-    background-color:  #1d2441;  /* Fondo blanco */
-    z-index: 1000; /* Asegurar que esté encima de otros elementos */
-    box-shadow: 0 2px 5px hsla(85, 82%, 61%, 0.102); /* Sombra sutil */
+    position: fixed; 
+    top: 125px; 
+    left: 0; 
+    width: 100%; 
+    background-color:  #1d2441;  
+    z-index: 1000; 
+    box-shadow: 0 2px 5px hsla(85, 82%, 61%, 0.102); 
   }
   
   .navbar-nav .nav-link {
@@ -60,14 +55,19 @@ header {
     border: none;
   }
   .navbar .nav-link:hover {
-    color: hwb(66 11% 7% / 0.612); /* Cambia al color deseado para el hover */
-    text-decoration: underline; /* Opcional: agregar subrayado al pasar el cursor */
+    color: hwb(66 11% 7% / 0.612); 
+    text-decoration: underline; 
   }
 
   
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
+  
+}
+.navbar .ms-auto {
+  margin-left: auto;
+}
+
   html {
     scroll-behavior: smooth;
 }
@@ -76,7 +76,7 @@ header {
   .container {
     margin-top: 30px;
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en la siguiente línea */
+    flex-wrap: wrap; 
     justify-content: center;
   }
   
@@ -100,49 +100,104 @@ header {
   }
   
   .card {
-    cursor: pointer; /* Cambia el cursor para indicar que se puede hacer clic */
+    cursor: pointer;
   }
   
-  /* Estilos para el carrito sobrepuesto */
+  /* Estilos para el carrito */
   .cart-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px; /* Ancho del carrito */
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    width: 400px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9); 
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    transform: translateX(-100%); /* Oculto inicialmente */
+    transform: translateX(-100%); 
     transition: transform 0.3s ease;
-    z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+    z-index: 1000; 
+    display: flex;
   }
   
+  #cartContainer {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
   .cart-overlay.active {
-    transform: translateX(0); /* Muestra el carrito */
+    transform: translateX(0); 
   }
   
   .cart-content {
     padding: 20px;
+    border-radius: 15px;
+    overflow-y: auto; /* Para permitir el desplazamiento cuando haya muchas items */
+    max-height: 90vh;
+    position: relative;
+  }
+  .cart-items-header {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr;
+    gap: 15px;
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 0.5rem;
+    border-bottom: 2px solid #ddd;
+    width: 100%; /* Controla el ancho del carrito */
+    max-width: 600px; /* Máximo ancho para el carrito */
   }
   
+  .cart-items-header span {
+    text-align: center;
+  }
   .cart-items {
-    max-height: 300px; /* Altura máxima del contenedor de items */
-    overflow-y: auto; /* Habilitar el desplazamiento si hay muchos productos */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .cart-item {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    
+  }
+  
+  .cart-product {
+    font-weight: bold;
   }
 
+.cart-items div {
+  padding: 4px;
+  border-bottom: 1px solid #ddd; /* Línea entre ítems */
+}
+  
+  .cart-option, .cart-price {
+    text-align: center;
+  }
+  #cartCount {
+    font-size: 0.75rem;
+    padding: 0.25em 0.4em;
+    z-index: 1; /* Asegura que esté visible sobre el ícono */
+}
+  
+
   .close-cart-btn {
-    position: absolute; /* Posicionamiento absoluto */
-    top: 20px; /* Ajusta la posición vertical */
-    right: 20px; /* Ajusta la posición a la derecha */
-    background: none; /* Sin fondo */
-    border: none; /* Sin borde */
-    color: white; /* Color del ícono */
-    font-size: 24px; /* Tamaño del ícono */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    background: none;
+    border: none; 
+    color: white; 
+    font-size: 24px;
+    cursor: pointer; 
 }
 
 .close-cart-btn:hover {
-    color: #ffcccc; /* Cambia el color al pasar el ratón */
+    color: #ffcccc; 
 }
 
 #cartButton {
@@ -153,48 +208,78 @@ header {
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
 }
-  /* Ejemplo de enfoque para campos de formulario */
+.cart-content h2 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.cart-content p {
+  background-color: #fff;
+  width: 90%;
+  max-width: 300px;
+  border-radius: 15px; /* Bordes redondeados */
+  text-align: center;
+  position: relative;
+}
+
 form input:focus,
 form textarea:focus {
-    outline: none; /* Remueve el contorno predeterminado */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Agrega un borde de sombra azul */
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
-/* Ejemplo de efecto de hover en tarjetas */
 .card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el mouse */
-    transform: scale(1.02); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02); 
 }
-
   
-  .total-price {
+.total-price {
     font-weight: bold;
+    color: #3498db; 
+    margin-top: 15px;
+    text-align: right;
+  }
+  #continueShopping {
+    background-color: hwb(186 11% 8%); 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
   }
   
-  .purchase-history,
-  .suggestions {
-    margin: 20px 0;
+  #continueShopping:hover {
+    background-color: hsl(205, 76%, 85%);
   }
   
-  .purchase-history div,
-  .suggestions div {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+  /* Botón de proceder al pago */
+  #payButton {
+    background-color: hsl(71, 87%, 64%); /* Fondo verde */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+ 
   }
-  
-  /* Estilo para la sección de contacto */
+  .cart-items {
+    margin: 1rem 0;
+  }
+  #payButton:hover {
+    background-color: hsl(133, 89%, 18%);
+  }
+    
+
+  /* Sección  contacto */
 #contacto {
-    background-color: #f8f9fa; /* Fondo suave */
-    padding: 40px 0; /* Espacio superior e inferior */
+    background-color: #f8f9fa; 
+    padding: 40px 0; 
     border-top: none;
     margin-top: 0; 
 }
 
 #contacto h2 {
-     margin: 0; /* Elimina margen superior/inferior */
-    padding-top: 0px; /* Espacio mínimo superior */
-    color: #1d2441; /* Color del título */
+     margin: 0; 
+    padding-top: 0px; 
+    color: #1d2441;
     position: relative;
     
 }
@@ -209,17 +294,17 @@ form textarea:focus {
   border-radius: 2px;
 } 
 #contacto .list-unstyled li {
-    margin-bottom: 10px; /* Espacio entre enlaces */
+    margin-bottom: 10px; 
 }
 
 #contacto .form-control {
-    border-radius: 0.25rem; /* Bordes redondeados para campos */
+    border-radius: 0.25rem;
     border: 1px solid #ced4da;
     transition: box-shadow 0.3s, border-color 0.3s;
 }
 
 #contacto .btn-primary {
-    margin-top: 10px; /* Espacio superior para el botón */
+    margin-top: 10px; 
     background-color: #1d2441;
     border: none;
     transition: background-color 0.3s, transform 0.2s;
@@ -229,100 +314,114 @@ form textarea:focus {
   transform: scale(1.05);
 }
 ul.list-unstyled a {
-    color: #007bff; /* Cambia esto al color que desees */
+    color: #007bff;
     transition: color 0.3s ease;
 }
 
 ul.list-unstyled a:hover {
-    color:#1d2441; /* Color al pasar el ratón */
+    color:#1d2441; 
 }
+
+/* Estilos footer */
 footer {
-  background-color: #1d2441; /* Color de fondo */
-  color: #f1f1f1; /* Color del texto */
-  padding: 15px 0; /* Espaciado vertical */
-  text-align: center; /* Alineación centrada del texto */
+  background-color: #1d2441; 
+  color: #f1f1f1; 
+  padding: 15px 0; 
+  text-align: center;
 }
 
 footer p {
-  margin: 0; /* Elimina márgenes */
-  font-size: 16px; /* Tamaño de letra predeterminado */
+  margin: 0; 
+  font-size: 16px; 
 }
 
-/* Ajuste de tamaño de letra para pantallas pequeñas */
+/* Media */
 @media (max-width: 576px) {
   footer p {
-      font-size: 14px; /* Disminuye el tamaño en pantallas pequeñas */
+      font-size: 14px; 
   }
 }
 
-  
 .secciones-container {
-    padding-top: 120px; /* Ajusta el valor según la altura del encabezado */
+    padding-top: 120px; 
   }
   section {
-    scroll-margin-top: 190px; /* Ajusta según la altura del encabezado */
+    scroll-margin-top: 190px; 
   }
   
   .carousel-item img {
-    height: 400px; /* Ajusta la altura del banner según lo necesites */
-    object-fit:  contain; /* Recorta la imagen para que ocupe todo el contenedor sin distorsionarse */
-    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    height: 400px; 
+    object-fit:  contain; 
+    width: 100%;
   }
   
   .carousel {
-    max-width: 1600px; /* Ancho máximo del carrusel */
-    margin: 0 auto; /* Centrar el carrusel */
-    overflow: hidden;
+    max-width: 1600px; 
+    margin: 0 auto;     overflow: hidden;
   }
  
 /* Tarjetas estilizadas */
 .card {
-  border: 1px solid #e0e0e0; /* Bordes de la tarjeta */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de la tarjeta */
-  transition: transform 0.2s; /* Transición al hover */
+
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s; 
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+}
+.card-img-top {
+  width: 100%;
+  height: 400px;
+  object-fit: cover; 
 }
 
 .card:hover {
-  transform: scale(1.05); /* Escala al hacer hover */
+  transform: scale(1.05); 
 }
+.card-body {
+  padding-top: 0.5rem; 
+  padding-bottom: 0.5rem; 
+}
+.card-img-top {
 
+  object-fit: cover;  /* Mantiene la imagen ajustada al tamaño de la tarjeta */
+}
 .card-footer {
-  background-color: #f8f9fa; /* Color de fondo del pie de la tarjeta */
+  background-color: #f8f9fa; 
 }
 
 .custom-modal .modal-content {
-  border: 2px solid #1d2441;  /* Cambia este valor al color que desees */
-  border-radius: 10px; /* Opcional: para esquinas redondeadas */
+  border: 2px solid #1d2441; 
+  border-radius: 10px; 
 }
 
 .custom-modal .modal-header {
-  background-color: #1d2441;  /* Color de fondo del encabezado */
-  color: white; /* Color del texto del encabezado */
+  background-color: #1d2441;  
+  color: white; 
 }
-/* Cambia el color del ícono de cierre a blanco */
+
 .btn-close {
   filter: invert(100%);
 }
 
-/* Cambia el color al hacer hover */
 .btn-close:hover {
-  filter: invert(50%); /* Cambia el valor según el color que desees al hacer hover */
-  background-color: transparent; /* Asegúrate de que el fondo sea transparente */
+  filter: invert(50%); 
+  background-color: transparent; 
 }
 
 .custom-review-button {
-  color: #1d2441; /* Color del texto por defecto */
-  text-decoration: none; /* Elimina el subrayado */
+  color: #1d2441;
+  text-decoration: none;
 }
 
-/* Color del botón al pasar el mouse */
 .custom-review-button:hover {
-  color: #FFD700; /* Cambia a un color dorado o el que desees */
+  color: #FFD700; /
 }
 
 
 #como-comprar {
-  margin-top: 80px; /* Ajusta este valor según sea necesario */
+  margin-top: 80px; 
 }
 
 .step-icon {
@@ -332,4 +431,230 @@ footer p {
   align-items: center;
   justify-content: center;
   font-size: 24px;
+}
+/* Estilo modal seleccion */
+#productModal .modal-content {
+  border-radius: 15px; 
+  border: 2px solid #1d2441; 
+}
+
+#productModal .modal-header {
+  background-color:#1d2441;  
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#productModal .modal-title {
+  color: white; 
+}
+
+#productModal .btn-close {
+  background-color: transparent;
+}
+
+#productModal .btn-primary {
+  background-color: hwb(143 4% 31%);
+  color: white;
+  border-radius: 8px;
+  border: none;
+}
+
+#productModal .modal-footer {
+  padding: 1rem;
+}
+
+#productModal .modal-body .form-label {
+  font-weight: bold;
+  color: #555; 
+  
+}
+/* Asegúrate de que el modal se adapta a pantallas pequeñas */
+.modal-dialog {
+  max-width: 100%;
+  margin: 1.75rem auto;  /* Agrega algo de margen arriba y abajo */
+}
+
+@media (max-width: 576px) {
+.modal-dialog {
+  margin: 0.5rem;  /* Reducir el margen en pantallas muy pequeñas */
+}
+}
+
+/* Si deseas que el modal tenga un ancho específico en pantallas grandes */
+@media (min-width: 768px) {
+.modal-dialog {
+  max-width: 600px;  /* Definir un ancho máximo para tablets o pantallas medianas */
+}
+}
+
+/* En pantallas grandes, puedes hacer que el modal tenga un tamaño mayor */
+@media (min-width: 992px) {
+.modal-dialog {
+  max-width: 800px;  /* Modal más grande en pantallas grandes */
+}
+}
+
+.construction-container {
+  margin: 0 auto;
+  padding: 80px;
+  max-width: 800px; 
+}
+p {
+  font-size: 1em;
+  margin: 50px 0;
+}
+
+.construction-image img {
+  width: 86%;
+  max-width: 700px;
+  margin: 10px 0;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: hsl(204, 90%, 19%);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-button:hover {
+  background-color: hwb(212 33% 11%);
+}
+
+/* Ajustes para el modal en pantallas pequeñas */
+@media (max-width: 576px) {
+  /* Asegura que el modal ocupe toda la pantalla en dispositivos pequeños */
+  .custom-modal .modal-dialog {
+      max-width: 100%;
+      margin: 0;
+  }
+
+  /* Reduce el margen y el padding del contenido del modal */
+  .custom-modal .modal-content {
+      border-radius: 0; /* Sin bordes redondeados */
+  }
+
+  /* Estilos de la cabecera */
+  .custom-modal .modal-header {
+      padding: 1rem;
+  }
+
+  /* Ajusta el título del modal */
+  .custom-modal .modal-title {
+      font-size: 1.2rem;
+  }
+
+  /* Aumenta el espaciado entre los ítems de reseña */
+  .custom-modal .modal-body .row.g-3 > [class*="col-"] {
+      margin-bottom: 1rem;
+  }
+
+  /* Estilos de la tarjeta de reseñas */
+  .custom-modal .card {
+      margin-bottom: 1rem;
+  }
+
+  /* Tamaño de texto reducido para reseñas */
+  .custom-modal .card-title {
+      font-size: 1rem;
+  }
+
+  .custom-modal .card-subtitle {
+      font-size: 0.9rem;
+  }
+
+  .custom-modal .card-text {
+      font-size: 0.85rem;
+  }
+}
+
+/* Ajustes generales para pantallas medianas en adelante */
+@media (min-width: 576px) {
+  .custom-modal .modal-dialog {
+      max-width: 800px; /* Ajusta el ancho máximo del modal */
+  }
+
+  /* Ajustes de padding y márgenes en pantallas grandes */
+  .custom-modal .modal-body {
+      padding: 2rem;
+  }
+
+  .custom-modal .card-title {
+      font-size: 1.1rem;
+  }
+
+  .custom-modal .card-subtitle {
+      font-size: 1rem;
+  }
+
+  .custom-modal .card-text {
+      font-size: 0.95rem;
+  }
+}
+@media (max-width: 992px) {
+  #cartContainer {
+      right: 0.5rem;
+  }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .cart-content {
+      width: 90%;
+      max-width: 400px;
+      padding: 15px;
+      border-radius: 8px;
+  }
+
+  .cart-content h2 {
+      font-size: 1.2rem;
+  }
+
+  .cart-content p {
+      font-size: 0.9rem;
+  }
+
+  /* Ajustes en la visualización de los elementos en el carrito */
+  .cart-items-header, .cart-items .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .cart-items-header span, .cart-items .cart-item span {
+      text-align: left;
+      width: 100%;
+  }
+
+  /* Ajustes en los botones */
+  #continueShopping, #payButton {
+      width: 100%;
+      font-size: 1rem;
+  }
+}
+
+/* Responsividad aún más pequeña (dispositivos como móviles muy pequeños) */
+@media (max-width: 480px) {
+  .cart-content {
+      width: 95%;
+      max-width: 350px;
+      padding: 10px;
+  }
+
+  .cart-content h2 {
+      font-size: 1rem;
+  }
+
+  .cart-content p {
+      font-size: 0.85rem;
+  }
+
+  .cart-items-header span, .cart-items .cart-item span {
+      font-size: 0.9rem;
+  }
+
+  #continueShopping, #payButton {
+      font-size: 1rem;
+  }
 }

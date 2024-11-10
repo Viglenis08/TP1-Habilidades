@@ -4,27 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Urban Threads</title>
-
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  
-  <!-- Google Fonts -->
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
   
-  <!-- CSS personalizado -->
   <link rel="stylesheet" href="css/style.css?v=1.0">
-  <!-- Bootstrap JS (incluye Popper.js) -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="icon" href="img/icono.svg" type="image/x-icon">
 
 </head>
 
 <body>
-
-  <!-- Encabezado -->
   <header id="header" style="
   background-image: url('img/header.png'); 
   background-size: cover; 
@@ -46,42 +38,40 @@
   </h2>
 </header>
 
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="productos.html">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contáctanos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="comprar.html">Como comprar</a>
+        </li>
+      </ul>
 
-  <!-- Navbar responsive -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="productos.html">Productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contáctanos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="comprar.html">Como comprar</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="d-flex align-items-center">
+      <div id="cartContainer">
         <button id="cartButton" class="btn btn-outline-light position-relative">
           <i class="fas fa-shopping-cart"></i>
           <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            0
+            0 <!-- Ejemplo de cantidad -->
           </span>
         </button>
       </div>
     </div>
-  </nav>
-
+  </div>
+</nav>
 
   <!-- Contenedor para secciones -->
   <div class="secciones-container">
@@ -90,7 +80,7 @@
 <section id="productos" class="seccion">
     <h2 class="text-center my-4"></h2>
     
-    <!-- Mini banner carrusel -->
+    <!-- Mini  carrusel -->
     <div id="carouselBanner" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="3000">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -116,115 +106,245 @@
 <!-- Galería de Productos -->
 <div class="container">
     <div class="row d-flex flex-wrap justify-content-center">
-      <div class="col-md-3 mb-4 d-flex">
-        <div class="card flex-fill">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 1" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 1" data-colors='["Rojo", "Verde", "Azul"]' data-sizes='["S", "M", "L"]'>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
+        <div class="card">
+          <img src="/img/static1.jpg" 
+          class="card-img-top" 
+          alt="Producto Activewear"
+          loading="lazy" 
+          data-animated="/img/gif1.gif" 
+          data-static="/img/static1.jpg" 
+             data-bs-toggle="modal" data-bs-target="#productModal" data-product="Activewear"
+             data-price="120000"
+             data-models='["Celeste", "Verde", "Gris"]'
+             data-sizes='["S", "M", "L"]'>
             <div class="card-body">
-                <h5 class="card-title">Producto 1</h5>
-                <p class="card-text">$10.00</p>
-                <!-- Icono para abrir las reseñas -->
-                <button  id="openReviewModal" class="btn btn-link custom-review-button" data-bs-toggle="modal" data-bs-target="#reviewModal">
-                    <i class="fas fa-star"></i> Ver Reseñas
-                </button>
+                <h5 class="card-title">Activewear</h5>
+                <p class="card-text">$120000</p>
+                <button class="openReviewModal btn btn-link custom-review-button">
+                  <i class="fas fa-star"></i> Ver Reseñas
+              </button>
             </div>
         </div>
     </div>
-        <div class="col-md-3 mb-4 d-flex">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
+      <div class="card">
+        <img src="/img/static2.jpg" 
+        class="card-img-top" 
+        alt="Producto Jeans Flare"
+        loading="lazy" 
+        data-animated="/img/gif2.gif" 
+        data-static="/img/static2.jpg" 
+           data-bs-toggle="modal" data-bs-target="#productModal" data-product="Jeans Flare"
+           data-price="150000"
+           data-models='["Basico", "Pinzas", "Rotura"]' data-sizes='["S", "M", "L"]'>
+          <div class="card-body">
+              <h5 class="card-title">Jeans Flare</h5>
+              <p class="card-text">$150000</p>
+              <button class="openReviewModal btn btn-link custom-review-button">
+                <i class="fas fa-star"></i> Ver Reseñas
+            </button>
+          </div>
+      </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
             <div class="card flex-fill">
-                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 2" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 2" data-colors='["Negro", "Blanco"]' data-sizes='["M", "L"]'>
+              <img src="/img/static3.jpg" 
+              class="card-img-top" 
+              alt="Producto Skinny Jeans"
+              loading="lazy" 
+              data-animated="/img/gif3.gif" 
+              data-static="/img/static3.jpg" 
+                 data-bs-toggle="modal" data-bs-target="#productModal" data-product="Skinny Jeans"
+                 data-price="200000"
+                 data-models='["Rotura", "Perlas", "Cinta"]' data-sizes='["S", "M", "L"]'>
                 <div class="card-body">
-                    <h5 class="card-title">Producto 2</h5>
-                    <p class="card-text">$15.00</p>
+                    <h5 class="card-title">Skinny Jeans</h5>
+                    <p class="card-text">$200000</p>
+                    <button class="openReviewModal btn btn-link custom-review-button">
+                      <i class="fas fa-star"></i> Ver Reseñas
+                  </button>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
             <div class="card flex-fill">
-                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 3" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 3" data-colors='["Amarillo", "Naranja"]' data-sizes='["S", "M"]'>
+              <img src="/img/static4.jpg" 
+              class="card-img-top" 
+              alt="Producto Chaqueta Denim"
+              loading="lazy" 
+              data-animated="/img/gif4.gif" 
+              data-static="/img/static4.jpg" 
+                 data-bs-toggle="modal" data-bs-target="#productModal" data-product="Chaqueta Denim"
+                 data-price="250000"
+                 data-models='["Corazones", "Brooks", "WOWB"]' data-sizes='["S", "M", "L"]'>
                 <div class="card-body">
-                    <h5 class="card-title">Producto 3</h5>
-                    <p class="card-text">$20.00</p>
+                    <h5 class="card-title">Chaqueta Denim</h5>
+                    <p class="card-text">$250000</p>
+                    <button class="openReviewModal btn btn-link custom-review-button">
+                      <i class="fas fa-star"></i> Ver Reseñas
+                  </button>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
             <div class="card flex-fill">
-                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 4" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 4" data-colors='["Gris", "Azul Claro"]' data-sizes='["L"]'>
+              <img src="/img/static5.jpg" 
+              class="card-img-top" 
+              alt="Producto Chaqueta Denim"
+              loading="lazy" 
+              data-animated="/img/gif5.gif" 
+              data-static="/img/static5.jpg" 
+                 data-bs-toggle="modal" data-bs-target="#productModal" data-product="Chaqueta Denim"
+                 data-price="250000"
+                 data-models='["Coffee", "Negra", "Unfollow"]' data-sizes='["S", "M", "L"]'>
                 <div class="card-body">
-                    <h5 class="card-title">Producto 4</h5>
-                    <p class="card-text">$25.00</p>
+                  <h5 class="card-title">Chaqueta Denim</h5>
+                  <p class="card-text">$250000</p>
+                  <button class="openReviewModal btn btn-link custom-review-button">
+                    <i class="fas fa-star"></i> Ver Reseñas
+                </button>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
             <div class="card flex-fill">
-                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 5" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 5" data-colors='["Rojo", "Verde", "Azul"]' data-sizes='["S", "M", "L"]'>
+              <img src="/img/static6.jpg" 
+              class="card-img-top" 
+              alt="Producto Overol"
+              loading="lazy" 
+              data-animated="/img/gif6.gif" 
+              data-static="/img/static6.jpg" 
+                 data-bs-toggle="modal" data-bs-target="#productModal" data-product="Overol"
+                 data-price="150000"
+                 data-models='["Rojo", "Marrón", "Azul"]' data-sizes='["S", "M", "L"]'>
                 <div class="card-body">
-                    <h5 class="card-title">Producto 5</h5>
-                    <p class="card-text">$10.00</p>
+                    <h5 class="card-title">Overol</h5>
+                    <p class="card-text">$150000</p>
+                    <button class="openReviewModal btn btn-link custom-review-button">
+                      <i class="fas fa-star"></i> Ver Reseñas
+                  </button>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
             <div class="card flex-fill">
-                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 6" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 6" data-colors='["Negro", "Blanco"]' data-sizes='["M", "L"]'>
+              <img src="/img/static7.jpg" 
+              class="card-img-top" 
+              alt="Producto Skinny Jeans"
+              loading="lazy" 
+              data-animated="/img/gif7.gif" 
+              data-static="/img/static7.jpg" 
+                 data-bs-toggle="modal" data-bs-target="#productModal" data-product="Skinny Jeans"
+                 data-price="200000"
+                 data-models='["Parches", "Rotura", "Basico"]' data-sizes='["S", "M", "L"]'>
                 <div class="card-body">
-                    <h5 class="card-title">Producto 6</h5>
-                    <p class="card-text">$15.00</p>
+                    <h5 class="card-title">Skinny Jeans</h5>
+                    <p class="card-text">$200000</p>
+                    <button class="openReviewModal btn btn-link custom-review-button">
+                      <i class="fas fa-star"></i> Ver Reseñas
+                  </button>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
             <div class="card flex-fill">
-                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 7" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 7" data-colors='["Amarillo", "Naranja"]' data-sizes='["S", "M"]'>
+              <img src="/img/static8.jpg" 
+              class="card-img-top" 
+              alt="Producto Vestidos"
+              loading="lazy" 
+              data-animated="/img/gif8.gif" 
+              data-static="/img/static8.jpg" 
+                 data-bs-toggle="modal" data-bs-target="#productModal" data-product="Vestidos"
+                 data-price="250000"
+                 data-models='["Gris", "Verde", "Café"]' data-sizes='["S", "M", "L"]'>
                 <div class="card-body">
-                    <h5 class="card-title">Producto 7</h5>
-                    <p class="card-text">$20.00</p>
+                    <h5 class="card-title">Vestidos</h5>
+                    <p class="card-text">$250000</p>
+                    <button class="openReviewModal btn btn-link custom-review-button">
+                      <i class="fas fa-star"></i> Ver Reseñas
+                  </button>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
             <div class="card flex-fill">
-                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 8" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 8" data-colors='["Gris", "Azul Claro"]' data-sizes='["L"]'>
+              <img src="/img/static9.jpg" 
+              class="card-img-top" 
+              alt="Producto Sastreros"
+              loading="lazy" 
+              data-animated="/img/gif9.gif" 
+              data-static="/img/static9.jpg" 
+                 data-bs-toggle="modal" data-bs-target="#productModal" data-product="Sastreros"
+                 data-price="100000"
+                 data-models='["Gris", "Lineas", "Café"]' data-sizes='["S", "M", "L"]'>
                 <div class="card-body">
-                    <h5 class="card-title">Producto 8</h5>
-                    <p class="card-text">$25.00</p>
+                    <h5 class="card-title">Sastreros</h5>
+                    <p class="card-text">$100000</p>
+                    <button class="openReviewModal btn btn-link custom-review-button">
+                      <i class="fas fa-star"></i> Ver Reseñas
+                  </button>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4 d-flex">
-            <div class="card flex-fill">
-                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 9" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 9" data-colors='["Rojo", "Verde", "Azul"]' data-sizes='["S", "M", "L"]'>
-                <div class="card-body">
-                    <h5 class="card-title">Producto 9</h5>
-                    <p class="card-text">$10.00</p>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
+            <div class="card flex-fill">   
+              <img src="/img/static10.jpg" 
+              class="card-img-top" 
+              alt="Producto Buzos"
+              loading="lazy" 
+              data-animated="/img/gif10.gif" 
+              data-static="/img/static10.jpg" 
+                 data-bs-toggle="modal" data-bs-target="#productModal" data-product="Buzos"
+                 data-price="150000"
+                 data-models='["Gris", "Con Cierre", "Café"]' data-sizes='["S", "M", "L"]'>              
+                   <div class="card-body">
+                    <h5 class="card-title">Buzos</h5>
+                    <p class="card-text">$150000</p>
+                    <button class="openReviewModal btn btn-link custom-review-button">
+                      <i class="fas fa-star"></i> Ver Reseñas
+                  </button>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
             <div class="card flex-fill">
-                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 10" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 10" data-colors='["Negro", "Blanco"]' data-sizes='["M", "L"]'>
+              <img src="/img/static11.jpg" 
+              class="card-img-top" 
+              alt="Producto Blazers"
+              loading="lazy" 
+              data-animated="/img/gif11.gif" 
+              data-static="/img/static11.jpg" 
+                 data-bs-toggle="modal" data-bs-target="#productModal" data-product="Blazers"
+                 data-price="200000"
+                 data-models='["Gris", "Rosa", "Marrón"]' data-sizes='["S", "M", "L"]'>
                 <div class="card-body">
-                    <h5 class="card-title">Producto 10</h5>
-                    <p class="card-text">$15.00</p>
+                    <h5 class="card-title">Blazers</h5>
+                    <p class="card-text">$200000</p>
+                    <button class="openReviewModal btn btn-link custom-review-button">
+                      <i class="fas fa-star"></i> Ver Reseñas
+                  </button>
                 </div>
             </div>
+
         </div>
-        <div class="col-md-3 mb-4 d-flex">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
             <div class="card flex-fill">
-                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 11" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 11" data-colors='["Amarillo", "Naranja"]' data-sizes='["S", "M"]'>
+              <img src="/img/static12.jpg" 
+              class="card-img-top" 
+              alt="Producto Corbatas"
+              loading="lazy" 
+              data-animated="/img/gif12.gif" 
+              data-static="/img/static12.jpg" 
+                 data-bs-toggle="modal" data-bs-target="#productModal" data-product="Corbata"
+                 data-price="95000"
+                 data-models='["Amarilla", "Verde", "Cuadros"]' data-sizes='["S", "M", "L"]'>
                 <div class="card-body">
-                    <h5 class="card-title">Producto 11</h5>
-                    <p class="card-text">$20.00</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-4 d-flex">
-            <div class="card flex-fill">
-                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Producto 12" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Producto 12" data-colors='["Gris", "Azul Claro"]' data-sizes='["L"]'>
-                <div class="card-body">
-                    <h5 class="card-title">Producto 12</h5>
-                    <p class="card-text">$25.00</p>
+                    <h5 class="card-title">Corbatas</h5>
+                    <p class="card-text">$95000</p>
+                    <button class="openReviewModal btn btn-link custom-review-button">
+                      <i class="fas fa-star"></i> Ver Reseñas
+                  </button>
                 </div>
             </div>
         </div>
@@ -235,77 +355,132 @@
     <!-- Modal para seleccionar opciones del producto -->
     <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="productModalLabel">Selecciona opciones para <span id="product-name"></span></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel">Selecciona opciones para <span id="product-name"></span></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                  <div class="mb-3">
+                      <label for="modelsSelect" class="form-label">Modelo</label>
+                      <select class="form-select" id="modelsSelect"></select>
+                  </div>
+                  <div class="mb-3">
+                      <label for="sizeSelect" class="form-label">Talle</label>
+                      <select class="form-select" id="sizeSelect"></select>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button class="btn btn-primary" id="addToCart">Agregar al carrito</button>
+              </div>
           </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="colorSelect" class="form-label">Color</label>
-              <select class="form-select" id="colorSelect"></select>
-            </div>
-            <div class="mb-3">
-              <label for="sizeSelect" class="form-label">Tamaño</label>
-              <select class="form-select" id="sizeSelect"></select>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button class="btn btn-primary" id="addToCart" data-price="20.00">Agregar al carrito</button>
-
-          </div>
-        </div>
       </div>
-    </div>
+  </div>
+
+
+    <!-- Modal para reseñas-->
+    <div class="modal fade custom-modal" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-fullscreen-sm-down">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="reviewModalLabel">Qué opinan nuestros clientes 📝</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <div class="row g-3">
+                      <div class="col-md-4 col-12">
+                          <div class="card h-100">
+                              <div class="card-body">
+                                  <h5 class="card-title">Juan P.</h5>
+                                  <h6 class="card-subtitle mb-2 text-muted">⭐️⭐️⭐️⭐️☆</h6>
+                                  <p class="card-text">"Excelente calidad, me encantó!"</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4 col-12">
+                          <div class="card h-100">
+                              <div class="card-body">
+                                  <h5 class="card-title">María G.</h5>
+                                  <h6 class="card-subtitle mb-2 text-muted">⭐️⭐️⭐️☆☆</h6>
+                                  <p class="card-text">"El tamaño no era lo que esperaba."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4 col-12">
+                          <div class="card h-100">
+                              <div class="card-body">
+                                  <h5 class="card-title">Ana S.</h5>
+                                  <h6 class="card-subtitle mb-2 text-muted">⭐️⭐️⭐️⭐️⭐️</h6>
+                                  <p class="card-text">"Definitivamente volveré a comprar!"</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  
+
+
   </section>
   
-  
-
-  
-    </section>
-<!-- Carrito sobrepuesto -->
+<!-- Carrito -->
 <div id="cartOverlay" class="cart-overlay">
-    <div class="cart-content">
-      <!-- Ícono de Cierre -->
-      <button id="closeCart" class="close-cart-btn">
-        <i class="fas fa-times"></i>
-      </button>
-      <h2>¡Tu pedido!📦</h2>
-      <p>¡Felicitaciones por tu compra!🥳</p>
-      <div id="cartItems" class="cart-items"></div>
-      <p id="totalPrice" class="total-price">Total: $0.00</p>
-      <button id="continueShopping" class="btn btn-secondary">¿Deseas seguir comprando?</button>
-      <button id="payButton" class="btn btn-success">Proceder al Pago</button>
+  <div class="cart-content">
+    <button id="closeCart" class="close-cart-btn">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2>¡Tu pedido! 📦</h2>
+    <p>¡Felicitaciones por tu compra! 🥳</p>
+    <div class="cart-items-header">
+      <span>Producto</span>
+      <span>Modelo</span>
+      <span>Talla</span>
+      <span>Precio</span>
     </div>
+    <div id="cartItems" class="cart-items"></div>
+    <p id="totalPrice" class="total-price">Total: $000</p>
+    <button id="continueShopping" class="btn btn-secondary">¿Deseas seguir comprando?</button>
+    <a href="pago.html" class="btn btn-success" id="payButton">Proceder al Pago</a>
+  </div>
 </div>
+
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const productModal = document.getElementById('productModal');
     const productName = document.getElementById('product-name');
-    const colorSelect = document.getElementById('colorSelect');
+    const modelSelect = document.getElementById('modelsSelect');
     const sizeSelect = document.getElementById('sizeSelect');
     const cartOverlay = document.getElementById('cartOverlay');
     const cartItemsContainer = document.getElementById('cartItems');
     const totalPriceElement = document.getElementById('totalPrice');
+    const addToCartButton = document.getElementById('addToCart');
     
     let cartItems = []; 
 
     productModal.addEventListener('show.bs.modal', (event) => {
-        const button = event.relatedTarget;
-        const product = button.getAttribute('data-product');
-        const colors = JSON.parse(button.getAttribute('data-colors'));
-        const sizes = JSON.parse(button.getAttribute('data-sizes'));
+    const button = event.relatedTarget;  
+    const product = button.getAttribute('data-product');  
+    const models = JSON.parse(button.getAttribute('data-models'));  
+    const sizes = JSON.parse(button.getAttribute('data-sizes'));  
+    const productPrice = button.closest('.card').querySelector('.card-text').textContent.replace('$', '').replace(',', ''); 
+    const priceWithoutDecimals = Math.floor(parseFloat(productPrice));
 
-        productName.textContent = product;
-        colorSelect.innerHTML = '';
-        sizeSelect.innerHTML = '';
+    modelSelect.innerHTML = '';
+    sizeSelect.innerHTML = '';
 
-        colors.forEach(color => {
+ 
+    productName.textContent = product;
+    addToCartButton.setAttribute('data-price', priceWithoutDecimals);  
+    addToCartButton.textContent = `Agregar al carrito - $${priceWithoutDecimals.toLocaleString()}`; 
+        models.forEach(model => {
             const option = document.createElement('option');
-            option.value = color;
-            option.textContent = color;
-            colorSelect.appendChild(option);
+            option.value = model;
+            option.textContent = model;
+            modelSelect.appendChild(option);
         });
 
         sizes.forEach(size => {
@@ -320,18 +495,18 @@ document.addEventListener('DOMContentLoaded', () => {
         cartOverlay.classList.toggle('active'); 
     });
 
-    document.getElementById('addToCart').addEventListener('click', () => {
-        const selectedColor = colorSelect.value;
+    addToCartButton.addEventListener('click', () => {
+        const selectedModel = modelSelect.value;
         const selectedSize = sizeSelect.value;
         const productNameText = productName.textContent;
-        const productPrice = parseFloat(document.getElementById('addToCart').getAttribute('data-price'));
+        const productPrice = parseFloat(addToCartButton.getAttribute('data-price'));
 
         if (isNaN(productPrice)) {
             console.error('Error: No se encontró el precio del producto.');
-            return; // Salir si no hay precio válido
+            return; 
         }
 
-        cartItems.push({ name: productNameText, color: selectedColor, size: selectedSize, price: productPrice });
+        cartItems.push({ name: productNameText, modelo: selectedModel, size: selectedSize, price: productPrice });
         updateCart();
         cartOverlay.classList.add('active');
 
@@ -340,22 +515,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateCart() {
-    cartItemsContainer.innerHTML = ''; 
-    let totalPrice = 0;
+        cartItemsContainer.innerHTML = ''; 
+        let totalPrice = 0;
 
-    // Actualiza el contador del carrito
-    const cartCountElement = document.getElementById('cartCount');
-    cartCountElement.textContent = cartItems.length; // Muestra la cantidad de artículos en el carrito
+        const cartCountElement = document.getElementById('cartCount');
+        cartCountElement.textContent = cartItems.length; 
+        cartItems.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('cart-item'); 
 
-    cartItems.forEach(item => {
-        const itemDiv = document.createElement('div');
-        itemDiv.textContent = `${item.name} - Color: ${item.color}, Tamaño: ${item.size} - $${item.price.toFixed(2)}`;
-        cartItemsContainer.appendChild(itemDiv);
-        totalPrice += item.price; 
-    });
+            const productName = document.createElement('span');
+            productName.classList.add('cart-product');
+            productName.textContent = item.name;
 
-    totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
-}
+            const productModel = document.createElement('span');
+            productModel.classList.add('cart-option');
+            productModel.textContent = item.modelo;
+
+            const productSize = document.createElement('span');
+            productSize.classList.add('cart-option');
+            productSize.textContent = item.size;
+
+            const productPrice = document.createElement('span');
+            productPrice.classList.add('cart-price');
+            productPrice.textContent = `$${item.price.toFixed(2)}`;
+
+            itemDiv.appendChild(productName);
+            itemDiv.appendChild(productModel);
+            itemDiv.appendChild(productSize);
+            itemDiv.appendChild(productPrice);
+
+            cartItemsContainer.appendChild(itemDiv);
+            totalPrice += item.price; 
+        });
+
+        totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+    }
 
     document.getElementById('continueShopping').addEventListener('click', () => {
         cartOverlay.classList.remove('active'); 
@@ -371,40 +566,34 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
     </script>
-    <!-- Al final de tu página de productos -->
 <script>
-  document.getElementById('openReviewModal').addEventListener('click', function() {
-      // Realiza una solicitud fetch para obtener el contenido del modal
-      fetch('resena_producto.html')
-          .then(response => response.text())
-          .then(data => {
-              // Crea un contenedor temporal para el contenido
-              const tempDiv = document.createElement('div');
-              tempDiv.innerHTML = data;
-
-              // Extrae el modal del HTML y añádelo al body
-              const modal = tempDiv.querySelector('#reviewModal');
-              document.body.appendChild(modal);
-
-              // Muestra el modal
-              const bootstrapModal = new bootstrap.Modal(modal);
-              bootstrapModal.show();
-
-              // Eliminar el modal del DOM después de cerrarlo
-              modal.addEventListener('hidden.bs.modal', function () {
-                  modal.remove();
-              });
-          })
-          .catch(error => console.error('Error al cargar el modal:', error));
+ document.querySelectorAll('.openReviewModal').forEach(button => {
+  button.addEventListener('click', function() {
+    const modal = new bootstrap.Modal(document.getElementById('reviewModal'));
+    modal.show();
   });
+});
+
 </script>
+
+<script>
+  document.querySelectorAll('.card-img-top').forEach(img => {
+    img.addEventListener('mouseenter', () => {
+        img.src = img.getAttribute('data-animated');
+    });
+    img.addEventListener('mouseleave', () => {
+        img.src = img.getAttribute('data-static');
+    });
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGz2l8eA3B1Iw8zFH02RtjHMj8mP7uHheY29d3G5DdfQ5" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eypK7UY57gANM8ZT7lNf6txj2N8mM82GegLG5jO03G5Og2PJG53R72W" crossorigin="anonymous"></script>
 
    <footer class="bg-dark text-white text-center py-3 mt-auto">
     <div class="container">
       <p class="mb-0">&copy; 2024 Urban Threads. Todos los derechos reservados.</p>
     </div>
   </footer>
-  
     
   </body>
   </html>
