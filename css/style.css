@@ -5,8 +5,8 @@ body {
     padding-top: 60px; 
   }
   
- 
-/* Encabezado fijo */
+
+/* Encabezado  */
 header {
     position: fixed; 
     top: 0; 
@@ -29,7 +29,6 @@ header {
     text-align: center;
   }
   
-  /* Smooth scroll */
   html {
     scroll-behavior: smooth;
   }
@@ -132,7 +131,7 @@ header {
   .cart-content {
     padding: 20px;
     border-radius: 15px;
-    overflow-y: auto; /* Para permitir el desplazamiento cuando haya muchas items */
+    overflow-y: auto; 
     max-height: 90vh;
     position: relative;
   }
@@ -144,8 +143,8 @@ header {
     color: #2c3e50;
     padding: 0.5rem;
     border-bottom: 2px solid #ddd;
-    width: 100%; /* Controla el ancho del carrito */
-    max-width: 600px; /* Máximo ancho para el carrito */
+    width: 100%;
+    max-width: 600px;
   }
   
   .cart-items-header span {
@@ -172,7 +171,7 @@ header {
 
 .cart-items div {
   padding: 4px;
-  border-bottom: 1px solid #ddd; /* Línea entre ítems */
+  border-bottom: 1px solid #ddd; 
 }
   
   .cart-option, .cart-price {
@@ -181,7 +180,7 @@ header {
   #cartCount {
     font-size: 0.75rem;
     padding: 0.25em 0.4em;
-    z-index: 1; /* Asegura que esté visible sobre el ícono */
+    z-index: 1;
 }
   
 
@@ -217,7 +216,7 @@ header {
   background-color: #fff;
   width: 90%;
   max-width: 300px;
-  border-radius: 15px; /* Bordes redondeados */
+  border-radius: 15px; 
   text-align: center;
   position: relative;
 }
@@ -253,7 +252,7 @@ form textarea:focus {
   
   /* Botón de proceder al pago */
   #payButton {
-    background-color: hsl(71, 87%, 64%); /* Fondo verde */
+    background-color: hsl(71, 87%, 64%); 
     color: white;
     border: none;
     border-radius: 8px;
@@ -385,7 +384,7 @@ footer p {
 }
 .card-img-top {
 
-  object-fit: cover;  /* Mantiene la imagen ajustada al tamaño de la tarjeta */
+  object-fit: cover; 
 }
 .card-footer {
   background-color: #f8f9fa; 
@@ -468,29 +467,29 @@ footer p {
   color: #555; 
   
 }
-/* Asegúrate de que el modal se adapta a pantallas pequeñas */
+
 .modal-dialog {
   max-width: 100%;
-  margin: 1.75rem auto;  /* Agrega algo de margen arriba y abajo */
+  margin: 1.75rem auto;  
 }
 
 @media (max-width: 576px) {
 .modal-dialog {
-  margin: 0.5rem;  /* Reducir el margen en pantallas muy pequeñas */
+  margin: 0.5rem; 
 }
 }
 
-/* Si deseas que el modal tenga un ancho específico en pantallas grandes */
+
 @media (min-width: 768px) {
 .modal-dialog {
-  max-width: 600px;  /* Definir un ancho máximo para tablets o pantallas medianas */
+  max-width: 600px;  
 }
 }
 
-/* En pantallas grandes, puedes hacer que el modal tenga un tamaño mayor */
+
 @media (min-width: 992px) {
 .modal-dialog {
-  max-width: 800px;  /* Modal más grande en pantallas grandes */
+  max-width: 800px;  
 }
 }
 
@@ -523,40 +522,33 @@ p {
   background-color: hwb(212 33% 11%);
 }
 
-/* Ajustes para el modal en pantallas pequeñas */
 @media (max-width: 576px) {
-  /* Asegura que el modal ocupe toda la pantalla en dispositivos pequeños */
+
   .custom-modal .modal-dialog {
       max-width: 100%;
       margin: 0;
   }
 
-  /* Reduce el margen y el padding del contenido del modal */
   .custom-modal .modal-content {
-      border-radius: 0; /* Sin bordes redondeados */
+      border-radius: 0;
   }
 
-  /* Estilos de la cabecera */
   .custom-modal .modal-header {
       padding: 1rem;
   }
 
-  /* Ajusta el título del modal */
   .custom-modal .modal-title {
       font-size: 1.2rem;
   }
 
-  /* Aumenta el espaciado entre los ítems de reseña */
   .custom-modal .modal-body .row.g-3 > [class*="col-"] {
       margin-bottom: 1rem;
   }
 
-  /* Estilos de la tarjeta de reseñas */
   .custom-modal .card {
       margin-bottom: 1rem;
   }
 
-  /* Tamaño de texto reducido para reseñas */
   .custom-modal .card-title {
       font-size: 1rem;
   }
@@ -570,13 +562,11 @@ p {
   }
 }
 
-/* Ajustes generales para pantallas medianas en adelante */
 @media (min-width: 576px) {
   .custom-modal .modal-dialog {
-      max-width: 800px; /* Ajusta el ancho máximo del modal */
+      max-width: 800px;
   }
 
-  /* Ajustes de padding y márgenes en pantallas grandes */
   .custom-modal .modal-body {
       padding: 2rem;
   }
@@ -599,7 +589,6 @@ p {
   }
 }
 
-/* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
   .cart-content {
       width: 90%;
@@ -616,7 +605,6 @@ p {
       font-size: 0.9rem;
   }
 
-  /* Ajustes en la visualización de los elementos en el carrito */
   .cart-items-header, .cart-items .cart-item {
       flex-direction: column;
       align-items: flex-start;
@@ -627,14 +615,12 @@ p {
       width: 100%;
   }
 
-  /* Ajustes en los botones */
   #continueShopping, #payButton {
       width: 100%;
       font-size: 1rem;
   }
 }
 
-/* Responsividad aún más pequeña (dispositivos como móviles muy pequeños) */
 @media (max-width: 480px) {
   .cart-content {
       width: 95%;
