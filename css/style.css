@@ -97,6 +97,14 @@ header {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+  .col-md-6.order-md-1 p {
+    text-align: justify;
+  }
+  .col-md-6 p {
+    text-align: justify;
+  }
+  
+  
   
   .card {
     cursor: pointer;
