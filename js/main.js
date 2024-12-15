@@ -142,3 +142,104 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const productos = [];
+    
+    // Seleccionamos todas las imágenes de productos que tienen datos relevantes
+    document.querySelectorAll('.card-img-top').forEach(img => {
+      const producto = {
+        nombre: img.getAttribute('data-product'),
+        precio: parseInt(img.getAttribute('data-price')),
+        modelos: JSON.parse(img.getAttribute('data-models')),
+        tallas: JSON.parse(img.getAttribute('data-sizes')),
+        imagenEstatica: img.getAttribute('data-static'),
+        imagenAnimada: img.getAttribute('data-animated'),
+      };
+      productos.push(producto);
+    });
+  
+    console.log(productos);
+  
+    // Ejemplo: Llenar el carrito con el primer producto
+    const cartContainer = document.getElementById('cartContainer');
+    cartContainer.addEventListener('click', () => {
+      alert(`Agregaste ${productos[0].nombre} al carrito por $${productos[0].precio}`);
+    });
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const productos = [];
+    
+    // Seleccionamos todas las imágenes de productos que tienen datos relevantes
+    document.querySelectorAll('.card-img-top').forEach(img => {
+      const producto = {
+        nombre: img.getAttribute('data-product'),
+        precio: parseInt(img.getAttribute('data-price')),
+        modelos: JSON.parse(img.getAttribute('data-models')),
+        tallas: JSON.parse(img.getAttribute('data-sizes')),
+        imagenEstatica: img.getAttribute('data-static'),
+        imagenAnimada: img.getAttribute('data-animated'),
+      };
+      productos.push(producto);
+    });
+  
+    console.log(productos);
+  
+    // Ejemplo: Llenar el carrito con el primer producto
+    const cartContainer = document.getElementById('cartContainer');
+    cartContainer.addEventListener('click', () => {
+      alert(`Agregaste ${productos[0].nombre} al carrito por $${productos[0].precio}`);
+    });
+  });
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener todos los botones "Ver más"
+    const showMoreButtons = document.querySelectorAll('.show-more-btn');
+
+    // Asignar evento de clic a cada botón
+    showMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Buscar el contenedor del producto correspondiente
+            const productCard = this.closest('.card-body');
+
+            // Encontrar la descripción corta y completa dentro de la tarjeta
+            const shortDescription = productCard.querySelector('.short-description');
+            const fullDescription = productCard.querySelector('.product-description');
+
+            // Alternar entre mostrar y ocultar la descripción completa
+            if (fullDescription.style.display === "none") {
+                fullDescription.style.display = "block";
+                shortDescription.style.display = "none";
+                this.textContent = "Ver menos"; // Cambiar texto del botón
+            } else {
+                fullDescription.style.display = "none";
+                shortDescription.style.display = "block";
+                this.textContent = "Ver más"; // Cambiar texto del botón
+            }
+        });
+    });
+});
+document.querySelectorAll('.show-more-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const description = this.closest('.card-body').querySelector('.product-description');
+      
+      // Verifica si la descripción está oculta o visible y cambia su estado
+      if (description.style.display === 'none') {
+        description.style.display = 'block';
+        this.textContent = 'Ver menos'; // Cambia el texto del botón a "Ver menos"
+      } else {
+        description.style.display = 'none';
+        this.textContent = 'Ver más'; // Cambia el texto del botón a "Ver más"
+      }
+    });
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const reviewModal = new bootstrap.Modal(document.getElementById('reviewModal'));
+  
+    const openReviewButton = document.querySelector('.openReviewModal');
+    openReviewButton.addEventListener('click', () => {
+      reviewModal.show();
+    });
+  });
+  

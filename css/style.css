@@ -653,3 +653,49 @@ p {
       font-size: 1rem;
   }
 }
+
+.product-description {
+  display: none; /* La descripción completa está oculta por defecto */
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.short-description {
+  display: block; /* La descripción corta está visible por defecto */
+}
+
+.show-more-btn {
+  margin-top: 10px;
+  cursor: pointer;
+  color: #1d2441;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+  .custom-review-button {
+    flex-direction: column; /* Apilan los botones en dispositivos móviles */
+    align-items: center; /* Centra los botones */
+    gap: 5px; /* Espacio entre los botones */
+  }
+
+  .show-more-btn,
+  .openReviewModal {
+    width: 100%; /* Los botones toman el ancho completo en dispositivos móviles */
+  }
+}
+
+/* Media Queries para pantallas medianas y grandes (tabletas y escritorios) */
+@media (min-width: 577px) {
+  .custom-review-button {
+    flex-direction: row; /* Mantiene los botones en fila en pantallas más grandes */
+    justify-content: space-between; /* Mantiene el espacio entre los botones */
+  }
+
+  .show-more-btn,
+  .openReviewModal {
+    width: auto; /* Los botones toman su tamaño original en pantallas más grandes */
+  }
+}
