@@ -66,6 +66,9 @@ header {
 .navbar .ms-auto {
   margin-left: auto;
 }
+.custom-bg-color {
+  background-color: #1d2441;
+}
 
   html {
     scroll-behavior: smooth;
@@ -103,8 +106,6 @@ header {
   .col-md-6 p {
     text-align: justify;
   }
-  
-  
   
   .card {
     cursor: pointer;
