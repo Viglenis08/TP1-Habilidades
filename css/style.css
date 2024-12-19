@@ -690,14 +690,14 @@ p {
 }
 
 .product-description {
-  display: none; /* La descripción completa está oculta por defecto */
+  display: none; 
   font-size: 14px;
   color: #555;
   margin-top: 10px;
 }
 
 .short-description {
-  display: block; /* La descripción corta está visible por defecto */
+  display: block; 
 }
 
 .show-more-btn {
@@ -711,26 +711,26 @@ p {
 
 @media (max-width: 576px) {
   .custom-review-button {
-    flex-direction: column; /* Apilan los botones en dispositivos móviles */
-    align-items: center; /* Centra los botones */
-    gap: 5px; /* Espacio entre los botones */
+    flex-direction: column;
+    align-items: center; 
+    gap: 5px; 
   }
 
   .show-more-btn,
   .openReviewModal {
-    width: 100%; /* Los botones toman el ancho completo en dispositivos móviles */
+    width: 100%; 
   }
 }
 
-/* Media Queries para pantallas medianas y grandes (tabletas y escritorios) */
+/* Media Queries para pantallas medianas y grandes  */
 @media (min-width: 577px) {
   .custom-review-button {
-    flex-direction: row; /* Mantiene los botones en fila en pantallas más grandes */
-    justify-content: space-between; /* Mantiene el espacio entre los botones */
+    flex-direction: row; 
+    justify-content: space-between; 
   }
 
   .show-more-btn,
   .openReviewModal {
-    width: auto; /* Los botones toman su tamaño original en pantallas más grandes */
+    width: auto; 
   }
 }
