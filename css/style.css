@@ -229,6 +229,41 @@ header {
   text-align: center;
   position: relative;
 }
+.cart-item .btn {
+  margin-left: 10px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-warning {
+  background-color: hsl(212, 70%, 66%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-warning:hover {
+  background-color: #e67e22;
+}
+
+.btn-danger {
+  background-color: hsl(1, 83%, 47%);
+  color: #120101;
+  border: none;
+  border-radius: 5px;
+}
+#clearCart{
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  
+
+}
+
+.btn-danger:hover {
+  background-color: hsl(6, 61%, 72%);
+}
 
 form input:focus,
 form textarea:focus {
@@ -248,8 +283,8 @@ form textarea:focus {
     text-align: right;
   }
   #continueShopping {
-    background-color: hwb(186 11% 8%); 
-    color: white;
+    background-color: hsl(212, 70%, 66%);
+    color: #120101;
     border: none;
     border-radius: 8px;
     margin-top: 10px;
@@ -261,8 +296,8 @@ form textarea:focus {
   
   /* Botón de proceder al pago */
   #payButton {
-    background-color: hsl(71, 87%, 64%); 
-    color: white;
+    background-color: hwb(68 44% 2%); 
+    color: #120101;
     border: none;
     border-radius: 8px;
     margin-top: 10px;
@@ -272,7 +307,7 @@ form textarea:focus {
     margin: 1rem 0;
   }
   #payButton:hover {
-    background-color: hsl(133, 89%, 18%);
+    background-color: hwb(130 7% 25%);
   }
     
 
