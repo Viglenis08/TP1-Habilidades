@@ -1,0 +1,23 @@
+{
+    "reviews": [
+      {
+        "productId": "blazers",
+        "user": "Juan P.",
+        "rating": 4,
+        "comment": "Excelente calidad, me encantó!"
+      },
+      {
+        "productId": "vestidos",
+        "user": "María G.",
+        "rating": 3,
+        "comment": "El tamaño no era lo que esperaba."
+      },
+      {
+        "productId": "sastrero",
+        "user": "Ana S.",
+        "rating": 5,
+        "comment": "Definitivamente volveré a comprar!"
+      }
+    ]
+  }
+  

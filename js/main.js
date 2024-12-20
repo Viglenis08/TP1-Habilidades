@@ -54,86 +54,95 @@ document.addEventListener('DOMContentLoaded', () => {
     addToCartButton.onclick = () => {
       // Solo agregamos al carrito si no estamos en modo edición
       if (editingIndex === null) {
-          const selectedModel = modelSelect.value;
-          const selectedSize = sizeSelect.value;
-          const productNameText = productName.textContent;
-          const productPrice = parseFloat(addToCartButton.getAttribute('data-price'));
-  
-          if (isNaN(productPrice)) {
-              console.error('Error: No se encontró el precio del producto.');
-              return;
-          }
-  
-          // Agregar un nuevo ítem al carrito
-          cartItems.push({ name: productNameText, modelo: selectedModel, size: selectedSize, price: productPrice });
-          updateCart();
-          cartOverlay.classList.add('active');
-  
-          const modal = bootstrap.Modal.getInstance(productModal);
-          modal.hide();
+        const selectedModel = modelSelect.value;
+        const selectedSize = sizeSelect.value;
+        const productNameText = productName.textContent;
+        const productPrice = parseFloat(addToCartButton.getAttribute('data-price'));
+
+        if (isNaN(productPrice)) {
+          console.error('Error: No se encontró el precio del producto.');
+          return;
+        }
+
+        if (!selectedModel || !selectedSize) {
+          console.error('Error: Por favor selecciona un modelo y un tamaño.');
+          return;
+        }
+
+        // Agregar un nuevo ítem al carrito
+        cartItems.push({ name: productNameText, modelo: selectedModel, size: selectedSize, price: productPrice });
+        updateCart();
+        cartOverlay.classList.add('active'); // Muestra el carrito
+
+        // Cerrar el modal
+        const modal = bootstrap.Modal.getInstance(productModal);
+        modal.hide(); // Cierra el modal después de agregar al carrito
+    
+        // Resto de acciones necesarias después de agregar al carrito
       }
     };
-
+    
+    
     function updateCart() {
       if (!cartItemsContainer || !cartCountElement || !totalPriceElement) return;
-
+    
       cartItemsContainer.innerHTML = '';
       let totalPrice = 0;
-
+    
       cartCountElement.textContent = cartItems.length;
-
+    
       cartItems.forEach((item, index) => {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('cart-item');
-      
+    
         const productName = document.createElement('span');
         productName.classList.add('cart-product');
         productName.textContent = item.name;
-      
+    
         const productModel = document.createElement('span');
         productModel.classList.add('cart-option');
         productModel.textContent = item.modelo;
-      
+    
         const productSize = document.createElement('span');
         productSize.classList.add('cart-option');
         productSize.textContent = item.size;
-      
+    
         const productPrice = document.createElement('span');
         productPrice.classList.add('cart-price');
         productPrice.textContent = `$${item.price.toFixed(2)}`;
-      
-        // Icono de editar
-        const editIcon = document.createElement('i');
-        editIcon.classList.add('fas', 'fa-edit', 'btn', 'btn-warning', 'btn-sm');
-        editIcon.addEventListener('click', () => editCartItem(index));
-      
-        // Icono de eliminar
-        const deleteIcon = document.createElement('i');
-        deleteIcon.classList.add('fas', 'fa-trash', 'btn', 'btn-danger', 'btn-sm');
-        deleteIcon.addEventListener('click', () => deleteCartItem(index));
-      
+    
+        // Crear ícono de editar
+        const editButton = document.createElement('i');
+        editButton.classList.add('fas', 'fa-edit', 'btn', 'btn-warning', 'btn-sm');
+        editButton.addEventListener('click', () => editCartItem(index));  // Aseguramos que el índice correcto se pasa al evento
+        
+        // Crear ícono de eliminar
+        const deleteButton = document.createElement('i');
+        deleteButton.classList.add('fas', 'fa-trash', 'btn', 'btn-danger', 'btn-sm');
+        deleteButton.addEventListener('click', () => deleteCartItem(index));
+        
         itemDiv.appendChild(productName);
         itemDiv.appendChild(productModel);
         itemDiv.appendChild(productSize);
         itemDiv.appendChild(productPrice);
-        itemDiv.appendChild(editIcon);
-        itemDiv.appendChild(deleteIcon);
-      
+        itemDiv.appendChild(editButton);
+        itemDiv.appendChild(deleteButton);
+    
         cartItemsContainer.appendChild(itemDiv);
         totalPrice += item.price;
       });
-      
-
+    
       totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
     }
-
+    
     function editCartItem(index) {
         const item = cartItems[index];  // Obtener el item actual del carrito
         modelSelect.value = item.modelo;  // Establecer el valor del modelo en el select
         sizeSelect.value = item.size;    // Establecer el valor del tamaño en el select
     
-        const modal = bootstrap.Modal.getInstance(productModal);  // Obtener la instancia del modal
-        modal.show();  // Mostrar el modal de edición
+        // Mostrar el modal de edición
+        const modal = bootstrap.Modal.getInstance(productModal);  
+        modal.show();  
     
         // Cambiar el texto del botón a 'Actualizar'
         addToCartButton.textContent = 'Actualizar';
@@ -141,13 +150,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Establecer el índice del ítem que se está editando
         editingIndex = index;
     
+        // Función para actualizar el carrito al hacer clic en "Actualizar"
         addToCartButton.onclick = () => {
-            // Actualizar el ítem directamente en el carrito (sin duplicar)
             cartItems[editingIndex] = {
-                name: productName.textContent,
-                modelo: modelSelect.value,
-                size: sizeSelect.value,
-                price: parseFloat(addToCartButton.getAttribute('data-price'))
+                name: productName.textContent,  // Usar el nombre del producto del modal
+                modelo: modelSelect.value,  // Nuevo modelo seleccionado
+                size: sizeSelect.value,    // Nuevo tamaño seleccionado
+                price: parseFloat(addToCartButton.getAttribute('data-price'))  // Precio actualizado
             };
     
             // Actualizar el carrito visualmente
@@ -164,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
     
+
     function deleteCartItem(index) {
       cartItems.splice(index, 1);
       updateCart();
@@ -199,27 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
       clearCartButton.addEventListener('click', () => {
         cartItems = [];
         updateCart();
-      });
-    }
-
-    showMoreBtn.forEach(button => {
-      button.addEventListener('click', function() {
-        const description = this.closest('.card-body').querySelector('.product-description');
-        
-        // Verifica si la descripción está oculta o visible y cambia su estado
-        if (description.style.display === 'none') {
-          description.style.display = 'block';
-          this.textContent = 'Ver menos'; // Cambia el texto del botón a "Ver menos"
-        } else {
-          description.style.display = 'none';
-          this.textContent = 'Ver más'; // Cambia el texto del botón a "Ver más"
-        }
-      });
-    });
-
-    if (reviewModalButton) {
-      reviewModalButton.addEventListener('click', () => {
-        reviewModal.show();
       });
     }
   }

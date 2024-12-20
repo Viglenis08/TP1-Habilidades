@@ -7,8 +7,25 @@
         "animatedImage": "https://raw.githubusercontent.com/Viglenis08/undertreads-assets/main/gif1.gif",
         "models": ["Celeste", "Verde", "Gris"],
         "sizes": ["S", "M", "L"],
-        "description": "Hecha de materiales como spandex y poliéster, ofrece flexibilidad, transpirabilidad y comodidad, ideal tanto para hacer deporte como para un look casual"
-      },
+        "description": "Hecha de materiales como spandex y poliéster, ofrece flexibilidad, transpirabilidad y comodidad, ideal tanto para hacer deporte como para un look casual",
+        "reviews": [
+        {
+          "user": "Juan P.",
+          "rating": 4,
+          "comment": "Excelente calidad, me encantó!"
+        },
+        {
+          "user": "María G.",
+          "rating": 3,
+          "comment": "El tamaño no era lo que esperaba."
+        },
+        {
+          "user": "Ana S.",
+          "rating": 5,
+          "comment": "Definitivamente volveré a comprar!"
+        }
+      ]  
+    },
       {
         "name": "Jeans Flare",
         "price": 150000,
@@ -16,7 +33,24 @@
         "animatedImage": "https://raw.githubusercontent.com/Viglenis08/undertreads-assets/main/gif2.gif",
         "models": ["Basico", "Pinzas", "Rotura"],
         "sizes": ["S", "M", "L"],
-        "description": "Hechos con denim de alta calidad, estos pantalones ofrecen comodidad y un toque retro perfecto para cualquier ocasión."
+        "description": "Hechos con denim de alta calidad, estos pantalones ofrecen comodidad y un toque retro perfecto para cualquier ocasión.",
+        "reviews": [
+        {
+          "user": "Juan P.",
+          "rating": 4,
+          "comment": "Excelente calidad, me encantó!"
+        },
+        {
+          "user": "María G.",
+          "rating": 3,
+          "comment": "El tamaño no era lo que esperaba."
+        },
+        {
+          "user": "Ana S.",
+          "rating": 5,
+          "comment": "Definitivamente volveré a comprar!"
+        }
+      ]  
       },
       {
         "name": "Skinny Jeans",
@@ -25,7 +59,24 @@
         "animatedImage": "https://raw.githubusercontent.com/Viglenis08/undertreads-assets/main/gif3.gif",
         "models": ["Rotura", "Perlas", "Cinta"],
         "sizes": ["S", "M", "L"],
-        "description": "Hechos de mezclilla elástica, ofrecen una silueta esbelta y moderna, ideal para un look casual o más estilizado."
+        "description": "Hechos de mezclilla elástica, ofrecen una silueta esbelta y moderna, ideal para un look casual o más estilizado.",
+        "reviews": [
+        {
+          "user": "Juan P.",
+          "rating": 4,
+          "comment": "Excelente calidad, me encantó!"
+        },
+        {
+          "user": "María G.",
+          "rating": 3,
+          "comment": "El tamaño no era lo que esperaba."
+        },
+        {
+          "user": "Ana S.",
+          "rating": 5,
+          "comment": "Definitivamente volveré a comprar!"
+        }
+      ]  
       },
       {
         "name": "Chaqueta Denim",
@@ -34,7 +85,24 @@
         "animatedImage": "https://raw.githubusercontent.com/Viglenis08/undertreads-assets/main/gif4.gif",
         "models": ["Corazones", "Brooks", "WOWB"],
         "sizes": ["S", "M", "L"],
-        "description": "Con un corte ajustado o ligeramente oversize, se destacan por su estilo atemporal y su capacidad para complementar cualquier look casual."
+        "description": "Con un corte ajustado o ligeramente oversize, se destacan por su estilo atemporal y su capacidad para complementar cualquier look casual.",
+        "reviews": [
+        {
+          "user": "Juan P.",
+          "rating": 4,
+          "comment": "Excelente calidad, me encantó!"
+        },
+        {
+          "user": "María G.",
+          "rating": 3,
+          "comment": "El tamaño no era lo que esperaba."
+        },
+        {
+          "user": "Ana S.",
+          "rating": 5,
+          "comment": "Definitivamente volveré a comprar!"
+        }
+      ]  
       },
       {
         "name": "Chaqueta Denim",
@@ -43,7 +111,24 @@
         "animatedImage": "https://raw.githubusercontent.com/Viglenis08/undertreads-assets/main/gif5.gif",
         "models": ["Coffee", "Negra", "Unfollow"],
         "sizes": ["S", "M", "L"],
-        "description": "Con un corte ajustado o ligeramente oversize, se destacan por su estilo atemporal y su capacidad para complementar cualquier look casual."
+        "description": "Con un corte ajustado o ligeramente oversize, se destacan por su estilo atemporal y su capacidad para complementar cualquier look casual.",
+        "reviews": [
+        {
+          "user": "Juan P.",
+          "rating": 4,
+          "comment": "Excelente calidad, me encantó!"
+        },
+        {
+          "user": "María G.",
+          "rating": 3,
+          "comment": "El tamaño no era lo que esperaba."
+        },
+        {
+          "user": "Ana S.",
+          "rating": 5,
+          "comment": "Definitivamente volveré a comprar!"
+        }
+      ]  
       },
       {
         "name": "Overol",
@@ -52,7 +137,24 @@
         "animatedImage": "https://raw.githubusercontent.com/Viglenis08/undertreads-assets/main/gif6.gif",
         "models": ["Rojo", "Marrón", "Azul"],
         "sizes": ["S", "M", "L"],
-        "description": "Es perfecto para un look casual o de trabajo, y su versatilidad permite combinarlo con diferentes tipos de tops o accesorios."
+        "description": "Es perfecto para un look casual o de trabajo, y su versatilidad permite combinarlo con diferentes tipos de tops o accesorios.",
+        "reviews": [
+        {
+          "user": "Juan P.",
+          "rating": 4,
+          "comment": "Excelente calidad, me encantó!"
+        },
+        {
+          "user": "María G.",
+          "rating": 3,
+          "comment": "El tamaño no era lo que esperaba."
+        },
+        {
+          "user": "Ana S.",
+          "rating": 5,
+          "comment": "Definitivamente volveré a comprar!"
+        }
+      ]  
       },
       {
         "name": "Skinny Jeans",
@@ -61,7 +163,24 @@
         "animatedImage": "https://raw.githubusercontent.com/Viglenis08/undertreads-assets/main/gif7.gif",
         "models": ["Parches", "Rotura", "Basico"],
         "sizes": ["S", "M", "L"],
-        "description": "Son ideales para crear looks casuales o más sofisticados, y se pueden combinar fácilmente con camisetas, camisas o chaquetas."
+        "description": "Son ideales para crear looks casuales o más sofisticados, y se pueden combinar fácilmente con camisetas, camisas o chaquetas.",
+        "reviews": [
+        {
+          "user": "Juan P.",
+          "rating": 4,
+          "comment": "Excelente calidad, me encantó!"
+        },
+        {
+          "user": "María G.",
+          "rating": 3,
+          "comment": "El tamaño no era lo que esperaba."
+        },
+        {
+          "user": "Ana S.",
+          "rating": 5,
+          "comment": "Definitivamente volveré a comprar!"
+        }
+      ]  
       },
       {
         "name": "Vestidos",
@@ -70,7 +189,24 @@
         "animatedImage": "https://raw.githubusercontent.com/Viglenis08/undertreads-assets/main/gif8.gif",
         "models": ["Gris", "Verde", "Café"],
         "sizes": ["S", "M", "L"],
-        "description": "Ideales para el día a día, hechos de materiales suaves y ligeros, perfectos para ocasiones informales o de descanso."
+        "description": "Ideales para el día a día, hechos de materiales suaves y ligeros, perfectos para ocasiones informales o de descanso.",
+        "reviews": [
+        {
+          "user": "Juan P.",
+          "rating": 4,
+          "comment": "Excelente calidad, me encantó!"
+        },
+        {
+          "user": "María G.",
+          "rating": 3,
+          "comment": "El tamaño no era lo que esperaba."
+        },
+        {
+          "user": "Ana S.",
+          "rating": 5,
+          "comment": "Definitivamente volveré a comprar!"
+        }
+      ]  
       },
       {
         "name": "Sastreros",
@@ -88,7 +224,24 @@
         "animatedImage": "https://raw.githubusercontent.com/Viglenis08/undertreads-assets/main/gif10.gif",
         "models": ["Gris", "Con Cierre", "Café"],
         "sizes": ["S", "M", "L"],
-        "description": "Ideales para un look casual, se pueden combinar fácilmente con jeans, leggings o pantalones. Los buzos son una opción versátil y acogedora."
+        "description": "Ideales para un look casual, se pueden combinar fácilmente con jeans, leggings o pantalones. Los buzos son una opción versátil y acogedora.",
+        "reviews": [
+        {
+          "user": "Juan P.",
+          "rating": 4,
+          "comment": "Excelente calidad, me encantó!"
+        },
+        {
+          "user": "María G.",
+          "rating": 3,
+          "comment": "El tamaño no era lo que esperaba."
+        },
+        {
+          "user": "Ana S.",
+          "rating": 5,
+          "comment": "Definitivamente volveré a comprar!"
+        }
+      ]  
       }
       ,
       {
@@ -98,7 +251,24 @@
         "animatedImage": "https://raw.githubusercontent.com/Viglenis08/undertreads-assets/main/gif11.gif",
         "models": ["Gris", "Rosa", "Marrón"],
         "sizes": ["S", "M", "L"],
-        "description": "Con un corte estructurado y elegante, los convierte en una opción indispensable para lograr un estilo pulido y moderno."
+        "description": "Con un corte estructurado y elegante, los convierte en una opción indispensable para lograr un estilo pulido y moderno.",
+        "reviews": [
+        {
+          "user": "Juan P.",
+          "rating": 4,
+          "comment": "Excelente calidad, me encantó!"
+        },
+        {
+          "user": "María G.",
+          "rating": 3,
+          "comment": "El tamaño no era lo que esperaba."
+        },
+        {
+          "user": "Ana S.",
+          "rating": 5,
+          "comment": "Definitivamente volveré a comprar!"
+        }
+      ]  
       },
       {
         "name": "Corbatas",
@@ -107,7 +277,24 @@
         "animatedImage": "https://raw.githubusercontent.com/Viglenis08/undertreads-assets/main/gif12.gif",
         "models": ["Amarilla", "Verde", "Cuadros"],
         "sizes": ["S", "M", "L"],
-        "description": "Hecha de materiales como spandex y poliéster, ofrece flexibilidad, transpirabilidad y comodidad, ideal tanto para hacer deporte como para un look casual."
+        "description": "Hecha de materiales como spandex y poliéster, ofrece flexibilidad, transpirabilidad y comodidad, ideal tanto para hacer deporte como para un look casual.",
+        "reviews": [
+        {
+          "user": "Juan P.",
+          "rating": 4,
+          "comment": "Excelente calidad, me encantó!"
+        },
+        {
+          "user": "María G.",
+          "rating": 3,
+          "comment": "El tamaño no era lo que esperaba."
+        },
+        {
+          "user": "Ana S.",
+          "rating": 5,
+          "comment": "Definitivamente volveré a comprar!"
+        }
+      ]  
       }
     ]
   }

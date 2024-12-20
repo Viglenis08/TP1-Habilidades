@@ -734,3 +734,33 @@ p {
     width: auto; 
   }
 }
+
+/* Estilos para las tarjetas de reseñas dentro del modal */
+#reviewsContainer .review-card {
+  border: 1px solid #e0e0e0;  /* Borde gris claro */
+  border-radius: 12px;  /* Bordes redondeados */
+  padding: 1.5rem;  /* Espaciado interno más amplio */
+  margin-bottom: 1.5rem;  /* Separación entre reseñas */
+  background-color: #f7f7f7;  /* Fondo gris claro */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra ligera */
+}
+
+/* Estilo para el contenido de cada reseña */
+#reviewsContainer .review-card p {
+  font-size: 1rem;
+  color: #555;  /* Color de texto */
+}
+
+/* Estilo para el título de cada reseña */
+#reviewsContainer .review-card h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;  /* Color del título */
+  margin-bottom: 1rem;  /* Espaciado debajo del título */
+}
+
+/* Estilo para la fecha de la reseña */
+#reviewsContainer .review-card small {
+  font-size: 0.9rem;
+  color: #888;  /* Color gris para la fecha */
+}
