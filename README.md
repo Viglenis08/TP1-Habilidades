@@ -33,7 +33,7 @@ Font Awesome: Para los iconos utilizados en el sitio (como el carrito de compras
 
 Características
 Responsive Design: El sitio está diseñado para ser completamente responsive, adaptándose a diferentes tamaños de pantalla, desde dispositivos móviles hasta pantallas de escritorio.
-Carrito de Compras: Los usuarios pueden añadir productos al carrito, ver el total de su compra y proceder con el pago.
+Carrito de Compras: Los usuarios pueden añadir, editar, eliminar o vaciar productos al carrito, ver el total de su compra y proceder con el pago.
 Sistema de Reseñas: Los usuarios pueden ver las reseñas de otros clientes y compartir su experiencia con los productos.
 Formulario de Contacto: Los usuarios pueden enviar preguntas o comentarios a través del formulario de contacto integrado con Formspree.
 Navegación Fluida: Cada sección (Nosotros, Productos, Contacto, Cómo Comprar) tiene su propia página y se puede acceder fácilmente desde el menú de navegación.
