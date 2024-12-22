@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cartItems.push({ name: productNameText, modelo: selectedModel, size: selectedSize, price: productPrice });
  
         cartOverlay.classList.add('active'); 
-
+        alert(`${productNameText} ha sido agregado al carrito.`);
         const modal = bootstrap.Modal.getInstance(productModal);
         modal.hide(); 
       }
@@ -162,39 +162,43 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.hide();
 
         addToCartButton.textContent = 'Agregar al carrito';
+        alert(`${item.name} ha sido actualizado en el carrito.`);
         editingIndex = null;
       };
     }
   
-
     function deleteCartItem(index) {
-      cartItems.splice(index, 1);
-      updateCart();
+      cartItems.splice(index, 1); // Elimina el producto del carrito
+      updateCart(); // Actualiza el carrito
+    
+      // Muestra un mensaje de alerta al usuario
+      alert('El producto ha sido eliminado del carrito.');
     }
-
+    
     if (cartButton) {
       cartButton.addEventListener('click', () => {
         cartOverlay.classList.toggle('active');
       });
     }
-
+    
     if (continueShopping) {
       continueShopping.addEventListener('click', () => {
         cartOverlay.classList.remove('active');
       });
     }
-
+    
     if (payButton) {
       payButton.addEventListener('click', () => {
         window.location.href = 'pagina-de-pago.html';
       });
     }
-
+    
     if (closeCart) {
       closeCart.addEventListener('click', () => {
         cartOverlay.classList.remove('active');
       });
     }
+    
 
     const clearCartButton = document.getElementById('clearCart');
 
