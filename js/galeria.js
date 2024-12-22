@@ -380,11 +380,11 @@ const products = [
 }
 
 async function fetchReviews(productName) {
-  console.log("Producto seleccionado:", productName); // Depuración
+  console.log("Producto seleccionado:", productName); 
   try {
       const product = products.find(p => p.name === productName);
       if (product) {
-          renderReviews(product.reviews); // Aquí se pasan las reseñas al render
+          renderReviews(product.reviews); 
       } else {
           console.log("Producto no encontrado");
       }
@@ -393,9 +393,9 @@ async function fetchReviews(productName) {
   }
 }
 function renderReviews(reviews) {
-  console.log("Reseñas del producto:", reviews); // Depuración
+  console.log("Reseñas del producto:", reviews);
   const reviewsContainer = document.getElementById("reviewsContainer");
-  reviewsContainer.innerHTML = ""; // Limpiar contenido anterior
+  reviewsContainer.innerHTML = ""; 
 
   if (reviews && reviews.length > 0) {
       reviews.forEach(review => {
@@ -417,7 +417,5 @@ function renderReviews(reviews) {
       reviewsContainer.innerHTML = "<p>No hay reseñas disponibles.</p>";
   }
 }
-
-// Llamada inicial para generar las tarjetas
 generateProductCards(products);
 
