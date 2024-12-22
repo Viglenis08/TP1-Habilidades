@@ -366,12 +366,15 @@ const products = [
         });
     });
 
-    // Evento para abrir las reseñas
     const reviewButtons = document.querySelectorAll('.openReviewModal');
     reviewButtons.forEach(button => {
         button.addEventListener('click', function() {
             const productName = this.getAttribute('data-product');
             fetchReviews(productName);
+    
+            // Abre el modal
+            const modal = new bootstrap.Modal(document.getElementById('reviewModal'));
+            modal.show();
         });
     });
 }
@@ -381,7 +384,7 @@ async function fetchReviews(productName) {
   try {
       const product = products.find(p => p.name === productName);
       if (product) {
-          renderReviews(product.reviews);
+          renderReviews(product.reviews); // Aquí se pasan las reseñas al render
       } else {
           console.log("Producto no encontrado");
       }
@@ -389,29 +392,31 @@ async function fetchReviews(productName) {
       console.error("Error al obtener las reseñas:", error);
   }
 }
-
 function renderReviews(reviews) {
-    console.log("Reseñas del producto:", reviews); // Depuración
-    const reviewsContainer = document.getElementById("reviewsContainer");
-    reviewsContainer.innerHTML = ""; // Limpiar contenido anterior
-    reviews.forEach(review => {
-        const reviewElement = document.createElement("div");
-        reviewElement.classList.add("col-md-4", "col-12");
+  console.log("Reseñas del producto:", reviews); // Depuración
+  const reviewsContainer = document.getElementById("reviewsContainer");
+  reviewsContainer.innerHTML = ""; // Limpiar contenido anterior
 
-        reviewElement.innerHTML = `
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">${review.user}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">⭐️⭐️⭐️⭐️${"☆".repeat(5 - review.rating)}</h6>
-                    <p class="card-text">"${review.comment}"</p>
-                </div>
-            </div>
-        `;
+  if (reviews && reviews.length > 0) {
+      reviews.forEach(review => {
+          const reviewElement = document.createElement("div");
+          reviewElement.classList.add("col-md-4", "col-12");
 
-        reviewsContainer.appendChild(reviewElement);
-    });
+          reviewElement.innerHTML = `
+              <div class="card h-100">
+                  <div class="card-body">
+                      <h5 class="card-title">${review.user}</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">⭐️⭐️⭐️⭐️${"☆".repeat(5 - review.rating)}</h6>
+                      <p class="card-text">"${review.comment}"</p>
+                  </div>
+              </div>
+          `;
+          reviewsContainer.appendChild(reviewElement);
+      });
+  } else {
+      reviewsContainer.innerHTML = "<p>No hay reseñas disponibles.</p>";
+  }
 }
-
 
 // Llamada inicial para generar las tarjetas
 generateProductCards(products);

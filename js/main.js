@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  
   const productModal = document.getElementById('productModal');
   const productName = document.getElementById('product-name');
   const modelSelect = document.getElementById('modelsSelect');
@@ -17,9 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const reviewModalButton = document.querySelector('.openReviewModal');
   const reviewModal = new bootstrap.Modal(document.getElementById('reviewModal'));
 
-  let cartItems = [];
-  let editingIndex = null; // Variable global para almacenar el índice del ítem en edición
-
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  let editingIndex = null; 
+  
+  
   if (productModal && productName && modelSelect && sizeSelect && addToCartButton) {
     productModal.addEventListener('show.bs.modal', (event) => {
       const button = event.relatedTarget;
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       productName.textContent = product;
       addToCartButton.setAttribute('data-price', priceWithoutDecimals);
       addToCartButton.textContent = `Agregar al carrito - $${priceWithoutDecimals.toLocaleString()}`;
+      updateCart();
 
       models.forEach((model) => {
         const option = document.createElement('option');
@@ -50,9 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
         sizeSelect.appendChild(option);
       });
     });
-
+    updateCart();
     addToCartButton.onclick = () => {
-      // Solo agregamos al carrito si no estamos en modo edición
       if (editingIndex === null) {
         const selectedModel = modelSelect.value;
         const selectedSize = sizeSelect.value;
@@ -69,19 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
-        // Agregar un nuevo ítem al carrito
         cartItems.push({ name: productNameText, modelo: selectedModel, size: selectedSize, price: productPrice });
-        updateCart();
-        cartOverlay.classList.add('active'); // Muestra el carrito
+ 
+        cartOverlay.classList.add('active'); 
 
-        // Cerrar el modal
         const modal = bootstrap.Modal.getInstance(productModal);
-        modal.hide(); // Cierra el modal después de agregar al carrito
-    
-        // Resto de acciones necesarias después de agregar al carrito
+        modal.hide(); 
       }
     };
-    
     
     function updateCart() {
       if (!cartItemsContainer || !cartCountElement || !totalPriceElement) return;
@@ -111,12 +108,10 @@ document.addEventListener('DOMContentLoaded', () => {
         productPrice.classList.add('cart-price');
         productPrice.textContent = `$${item.price.toFixed(2)}`;
     
-        // Crear ícono de editar
         const editButton = document.createElement('i');
         editButton.classList.add('fas', 'fa-edit', 'btn', 'btn-warning', 'btn-sm');
-        editButton.addEventListener('click', () => editCartItem(index));  // Aseguramos que el índice correcto se pasa al evento
+        editButton.addEventListener('click', () => editCartItem(index)); 
         
-        // Crear ícono de eliminar
         const deleteButton = document.createElement('i');
         deleteButton.classList.add('fas', 'fa-trash', 'btn', 'btn-danger', 'btn-sm');
         deleteButton.addEventListener('click', () => deleteCartItem(index));
@@ -133,46 +128,44 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     
       totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }
     
     function editCartItem(index) {
-        const item = cartItems[index];  // Obtener el item actual del carrito
-        modelSelect.value = item.modelo;  // Establecer el valor del modelo en el select
-        sizeSelect.value = item.size;    // Establecer el valor del tamaño en el select
-    
-        // Mostrar el modal de edición
-        const modal = bootstrap.Modal.getInstance(productModal);  
-        modal.show();  
-    
-        // Cambiar el texto del botón a 'Actualizar'
-        addToCartButton.textContent = 'Actualizar';
-    
-        // Establecer el índice del ítem que se está editando
-        editingIndex = index;
-    
-        // Función para actualizar el carrito al hacer clic en "Actualizar"
-        addToCartButton.onclick = () => {
-            cartItems[editingIndex] = {
-                name: productName.textContent,  // Usar el nombre del producto del modal
-                modelo: modelSelect.value,  // Nuevo modelo seleccionado
-                size: sizeSelect.value,    // Nuevo tamaño seleccionado
-                price: parseFloat(addToCartButton.getAttribute('data-price'))  // Precio actualizado
-            };
-    
-            // Actualizar el carrito visualmente
-            updateCart();
-    
-            // Cerrar el modal
-            modal.hide();
-    
-            // Restaurar el texto y el comportamiento del botón
-            addToCartButton.textContent = 'Agregar al carrito';
-    
-            // Restablecer el valor de la variable global
-            editingIndex = null;
+      const item = cartItems[index];
+      editingIndex = index;
+
+      productName.textContent = item.name;
+      modelSelect.value = item.modelo;
+      sizeSelect.value = item.size;
+      addToCartButton.textContent = 'Actualizar';
+
+      const modal = new bootstrap.Modal(productModal);
+      modal.show();
+  
+      addToCartButton.onclick = () => {
+        const updatedModel = modelSelect.value;
+        const updatedSize = sizeSelect.value;
+  
+        if (!updatedModel || !updatedSize) {
+          alert('Por favor selecciona un modelo y un tamaño.');
+          return;
+        }
+  
+        cartItems[editingIndex] = {
+          ...item,
+          modelo: updatedModel,
+          size: updatedSize,
         };
+  
+        updateCart();
+        modal.hide();
+
+        addToCartButton.textContent = 'Agregar al carrito';
+        editingIndex = null;
+      };
     }
-    
+  
 
     function deleteCartItem(index) {
       cartItems.splice(index, 1);
